@@ -85,7 +85,7 @@
     
     @media (max-width: 767px) {
         .mydesk {
-            background: url('../img/mydesk.jpg') center fixed;
+            background: url('../img/mydesk.jpg') center;
  /*           -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
@@ -106,7 +106,7 @@
 
         @media (max-width: 767px) {
         .mydeskColor {
-            background: url('../img/mydesk.jpg') center fixed;
+            background: url('../img/mydesk.jpg') center;
             -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
@@ -126,7 +126,7 @@
     }
     @media (max-width: 767px) {
         .mydeskBW {
-            background: url('../img/mydeskBW.jpg') center fixed;
+            background: url('../img/mydeskBW.jpg') center;
             -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
