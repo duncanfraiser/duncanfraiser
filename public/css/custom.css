@@ -85,8 +85,8 @@
     
     @media (max-width: 767px) {
         .mydesk {
-/*            background: url('../img/mydesk.jpg') center fixed;
-            -webkit-background-size: cover; 
+            background: url('../img/mydesk.jpg') center;
+ /*           -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
             background-size: cover;*/
