@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?2">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}?3">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <script src="{{ asset('/js/jquery-3.2.0.min.js') }}"></script>
     <script src="{{ asset('/js/bootstrap.js') }}"></script>
