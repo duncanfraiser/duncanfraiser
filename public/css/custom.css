@@ -86,10 +86,6 @@
     @media (max-width: 767px) {
         .mydesk {
             background: url('../img/mydesk.jpg') center;
-/*           -webkit-background-size: 100%; 
-            -moz-background-size: 100%; 
-            -o-background-size: 100%; 
-            background-size: 100%; */
             -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
@@ -108,6 +104,16 @@
         padding:0px
     }
 
+        @media (max-width: 767px) {
+        .mydeskColor {
+            background: url('../img/mydesk.jpg') center;
+            -webkit-background-size: cover; 
+            -moz-background-size: cover; 
+            -o-background-size: cover; 
+            background-size: cover;
+        }
+    }
+
     .mydeskBW{
         background: url('../img/mydeskBW.jpg') center center no-repeat fixed;
         -webkit-background-size: cover;
@@ -117,6 +123,15 @@
         min-height: 15em;
         margin:0px; 
         padding:0px
+    }
+    @media (max-width: 767px) {
+        .mydeskBW {
+            background: url('../img/mydeskBW.jpg') center;
+            -webkit-background-size: cover; 
+            -moz-background-size: cover; 
+            -o-background-size: cover; 
+            background-size: cover;
+        }
     }
 
 /* NAVBAR Styles */
