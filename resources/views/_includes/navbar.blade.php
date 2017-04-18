@@ -2,7 +2,7 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" style="background-color: #0000A0" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle" style="background-color: #000" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar" style="background-color: #fff"></span>
             <span class="icon-bar" style="background-color: #fff"></span>

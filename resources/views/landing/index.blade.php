@@ -15,18 +15,15 @@
 
 
     {{-- About Me --}}    
-    <div class="col-md-12" style="background:transparent;">
-      <div class="os-animation about" data-os-animation="fadeIn" data-os-animation-delay="0.0s">
+    <div class="col-md-12 about" style="background:transparent;">
+      <div class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.0s">
         <h1><center><u>About Me</u></center></h1>
       </div>
-      <div class="os-animation about" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
+      <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.3s">
         <center><img src="{{'img/profile.jpg'}}" class="image img-circle img-responsive flex-center"></center>
       </div>
-      <div class="os-animation about" data-os-animation="fadeIn" data-os-animation-delay="0.6s" style="padding: 5em 15em">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.6s">
+        <h3>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Engineering and Full Stack Application & Software Development.</h3><h3/>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems. I am interested and have experience in server configuration, app development, database architecture and software implementation.</h3><h3/>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member. </h3>
       </div>
     </div>
 
