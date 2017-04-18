@@ -22,8 +22,8 @@
       <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.3s">
         <center><img src="{{'img/profile.jpg'}}" class="image img-circle img-responsive flex-center"></center>
       </div>
-      <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.6s">
-        <h3>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Engineering and Full Stack Application & Software Development.</h3><h3/>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems. I am interested and have experience in server configuration, app development, database architecture and software implementation.</h3><h3/>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member. </h3>
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.6s">
+        <p>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Engineering and Full Stack Application & Software Development.</br><br/>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems. I am interested and have experience in server configuration, app development, database architecture and software implementation.</br><br/>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member. </p>
       </div>
     </div>
 

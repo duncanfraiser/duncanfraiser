@@ -250,13 +250,13 @@
 /*homepage circle profile picture*/
 .img-circle {
     margin-top: 2em;
+    margin-bottom: 2em;
     border-radius: 50%;
     width: 300px;
 }
     @media (max-width: 767px) {
         .img-circle {
-    margin-top: 2em;
-     width: 250px;
+            width: 250px;
         }
     }
 
@@ -274,6 +274,16 @@ h3 {
         padding: 2em 2em 2em 2em;
     }
 }
+
+.abouttext{
+    font-size: 1.5em;
+}
+    @media (max-width: 767px) {
+        .about {
+            font-size: 12px;
+    }
+}
+
 
 
  .about > h1{
