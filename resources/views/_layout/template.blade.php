@@ -12,7 +12,8 @@
     <script src="{{ asset('/js/bootstrap.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
-
+{{-- google fonts for mobile view --}}
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 
 
