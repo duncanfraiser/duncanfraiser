@@ -23,7 +23,7 @@
         <center><img src="{{'img/profile.jpg'}}" class="image img-circle img-responsive flex-center"></center>
       </div>
       <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.6s">
-        <p>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Engineering and Full Stack Application & Software Development.</br><br/>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems. I am interested and have experience in server configuration, app development, database architecture and software implementation.</br><br/>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member. </p>
+        <p>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Object Oriented Programming with Full Stack Application & Software Development.</br><br/>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems.</br><br/>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member. </p>
       </div>
     </div>
 
@@ -62,7 +62,7 @@
 
          <div class="col-md-3 os-animation skill" data-os-animation="fadeInRight" data-os-animation-delay="1.4s">
           <h2>Frontend</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>All my applications are mobile responsive with a focus on easy client-side usabillity. Front-end Client-side development is the practice of producing HTML, CSS and JavaScript for an Application so that a user can see and interact with them directly. </p>
         </div>
 
     </div>
