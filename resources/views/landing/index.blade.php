@@ -76,7 +76,7 @@
 
 
 
-<div class="col-md-12" style="background-color: #000; padding: 3em">
+<div class="col-md-12 tools">
   <div class="col-md-9 col-md-offset-3">
       <h1 class="os-animation" style="color: #fff; data-os-animation="fadeIn" data-os-animation-delay="0s"><u>Development Tools</u></h1>
   </div>
@@ -110,7 +110,7 @@
 </div>
 
 <div class="col-md-12 foots">
-  <p class="footData" style="float: right">&copy; 2017 Duncan Fraiser Jr.</p>
+  <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
 </div>
 
 </div>

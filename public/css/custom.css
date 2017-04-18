@@ -192,7 +192,13 @@
 
 .footData{
     margin: 10px 100px;
+    float: right;
 }
+    @media (max-width: 767px) {
+        .footData{
+       margin: 1em 2em;
+        }
+    }
 /*END FOOTER*/
 
     .introName{
@@ -215,7 +221,15 @@
         }
     }
 
-
+    .tools {
+        background: transparent;
+        padding: 3em;
+    }
+    @media (max-width: 767px) {
+        .tools{
+        padding: 1em;
+        }
+    }
 /*these styles hides the animation untill it fires*/
 .os-animation{
   opacity: 0;
