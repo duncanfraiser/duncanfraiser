@@ -22,9 +22,18 @@
       <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.3s">
         <center><img src="{{'img/profile.jpg'}}" class="image img-circle img-responsive flex-center"></center>
       </div>
-      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.6s">
-        <p>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Object Oriented Programming with Full Stack Application & Software Development.</br><br/>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems.</br><br/>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member. </p>
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.5s">
+        <p>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Object Oriented Programming with Full Stack Application & Software Development.</p>
       </div>
+      
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.7s">
+      <p>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems.</p>
+      </div>
+
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.9s">
+      <p>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member.</p>
+      </div>
+
     </div>
 
 
@@ -47,30 +56,29 @@
 
         <div class="col-md-3 os-animation skill" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s">
           <h2>Server</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>I have my own server that I provide vitual hosts for production applications. I provide webhosting, email, backups and other services for the client's applications.</p>
         </div>
 
         <div class="col-md-3 os-animation skill" data-os-animation="fadeInDown" data-os-animation-delay="0.8s">
           <h2>Database</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>All of my application's content are database driven. I design, build, and use relational databases to accuratley meet all of my clients requirements. Using Object-oriented database management systems I combine my database capabilities with object-oriented programming to achieve a smart and scalable application.</p>
         </div>
 
         <div class="col-md-3 os-animation skill" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
           <h2>Backend</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>I develope all of my applications with a strong foundation of Object-oriented programming. Using the Laravel PHP framework my custom applications can be tallored to any functionality request from a client. I also make costomized dashboards so the client can have the ability to update live content to their application.</p>
         </div>
 
          <div class="col-md-3 os-animation skill" data-os-animation="fadeInRight" data-os-animation-delay="1.4s">
           <h2>Frontend</h2>
-          <p>All my applications are mobile responsive with a focus on easy client-side usabillity. Front-end Client-side development is the practice of producing HTML, CSS and JavaScript for an Application so that a user can see and interact with them directly. </p>
+          <p>I use CSS and JavaScript techniques to develope a slick look of styles customized for the application's content. All my applications are mobile responsive with a focus on easy client-side usabillity.</p>
         </div>
 
     </div>
 </div>
 
 <div class="col-md-12" style="padding: 0">
-
-  <div class="mydeskColor" >
+  <div class="mydeskColor">
   </div>
 </div>
 

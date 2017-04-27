@@ -8,15 +8,14 @@
             <span class="icon-bar" style="background-color: #fff"></span>
             <span class="icon-bar" style="background-color: #fff"></span>
           </button>
-          <a class="navbar-brand scrollTo" href="#intro"><img height='100%' src="{{url('/img/logo_white_sm.png')}}"></a>
+          <a class="navbar-brand scrollTo" href="{{url('/')}}"><img height='100%' src="{{url('/img/logo_white_sm.png')}}"></a>
         </div>
         <div class="navbar-collapse collapse" id="navigation">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#intro">Intro</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Skills</a></li>
-            <li><a href="#references">My work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{{url('/')}}">Home</a></li>
+            <li><a href="{{url('/resume')}}">resume</a></li>
+            <li><a href="{{url('/')}}">Family</a></li>
+            <li><a href="{{url('/contact/create')}}">Contact</a></li>
           </ul>
         </div>
       </div>

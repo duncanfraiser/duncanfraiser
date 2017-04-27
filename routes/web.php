@@ -16,3 +16,13 @@
 // });
 
 Route::resource('/', 'LandingController');
+Route::resource('/resume', 'ResumeController');
+Route::resource('/contact', 'ContactController');
+Route::get('/contact/{id}/thanks', 'ContactController@thanks');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
