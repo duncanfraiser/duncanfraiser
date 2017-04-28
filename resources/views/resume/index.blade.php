@@ -12,7 +12,7 @@
       <h2 class="catigory os-animation animated fadeInDown" data-os-animation-delay="0.1s">Experience</h2>
       <div style="background-color: #fff; height: 1px;"></div>
       <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Ergon, Inc. ( Jackson, MS )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Lead Web Developer</h5>
+      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Lead Web Developer <span class="date">8/2015 to Current</span></h5>
       <ul>
         <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Write object oriented, efficient code using best software development practices.</li>
         <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Network Server setup using Ubuntu Linux operating system and virtual host configuration.</li>

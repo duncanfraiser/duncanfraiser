@@ -14,7 +14,6 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{{url('/')}}">Home</a></li>
             <li><a href="{{url('/resume')}}">resume</a></li>
-            <li><a href="{{url('/')}}">Family</a></li>
             <li><a href="{{url('/contact/create')}}">Contact</a></li>
           </ul>
         </div>
