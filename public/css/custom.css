@@ -14,6 +14,45 @@
             font-weight: bold;
         }
     }
+
+
+/*work image text when hovering*/
+.img__wrap {
+  position: relative;
+  height: 200px;
+  width: 235px;
+}
+
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(64,64,64,0.9);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align:center;
+  font-weight: bold;
+  font-size: 1.5em;
+
+  /* transition effect. not necessary */
+  transition: opacity .1s, visibility .5s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
     .full-height {
         height: 100vh;
     }
@@ -256,6 +295,19 @@
         padding: 1em;
         }
     }
+
+
+    .work {
+        background: transparent;
+        padding: 3em;
+    }
+    @media (max-width: 767px) {
+        .work{
+        padding: 1em;
+        }
+    }
+
+
 /*these styles hides the animation untill it fires*/
 .os-animation{
   opacity: 0;
@@ -410,8 +462,15 @@ color: #fff;
 }
 
 
+.red{
+    background-color: red;
+}
+
+
+
 .date{
     float: right;
+/*    font-style: normal;*/
 }
 
    @media (max-width: 700px) {
@@ -420,10 +479,10 @@ color: #fff;
         }
     }
 
+
+
  u {
     text-decoration: none;
     border-bottom: 1px solid #fff;
   }​
-
-
 
