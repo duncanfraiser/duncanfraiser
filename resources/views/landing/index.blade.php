@@ -118,7 +118,7 @@
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
         <a href="">
           <div class="img__wrap">
-            <img class="img__img" style="width:100%"   src="{{url('/img/kennykens.png')}}" />
+            <img class="img__img" src="{{url('/img/kennykens.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Kenny Kens<br/>and the<br/>Brown Bottle Boys</p>
           </div>
         </a>
@@ -128,7 +128,7 @@
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
         <a href="">
           <div class="img__wrap">
-            <img class="img__img" style="width:100%"   src="{{url('/img/learningCenter.png')}}" />
+            <img class="img__img" src="{{url('/img/learningCenter.png')}}" />
             <p class="img__description flex-center" style="margin: 0">St. Paul<br/>Early<br/>Learning Center</p>
           </div>
         </a>
@@ -137,7 +137,7 @@
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".7s">
         <a href="">
           <div class="img__wrap">
-            <img class="img__img" style="width:100%"   src="{{url('/img/stPaul.png')}}" />
+            <img class="img__img" src="{{url('/img/stPaul.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Catholic<br/>Church</p>
           </div>
         </a>
@@ -147,7 +147,7 @@
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".9s">
         <a href="">
           <div class="img__wrap">
-            <img class="img__img" style="width:100%"   src="{{url('/img/ergon.png')}}" />
+            <img class="img__img" src="{{url('/img/ergon.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Ergon, Inc.<br/>Work Related<br/>Websites</p>
           </div>
         </a>
