@@ -19,15 +19,15 @@
       <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.1s">
         <center><img src="{{'img/profile.jpg'}}" class="image img-circle img-responsive flex-center"></center>
       </div>
-      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.2s">
         <p>I am an innovative thinker, initiative taker and multi-dimensional professional with exceptional logical and analytical skills. I have a strong background in Object Oriented Programming with Full Stack Application & Software Development.</p>
       </div>
       
-      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.5s">
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
         <p>I graduated from The University of Mississippi (Hotty Toddy!) with my Bachelor of Business Administration and Management Information Systems.</p>
       </div>
 
-      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.9s">
+      <div class="os-animation abouttext" data-os-animation="fadeIn" data-os-animation-delay="0.4s">
         <p>My objectives are to be able to use my strong motivational and leadership skills to drive positive reinforcement throughout your company.  I have the ability to work under pressure with strong interpersonal skills as an individual as well as a team member.</p>
       </div>
 
