@@ -10,6 +10,13 @@
   </div>
 
 
+
+
+
+
+
+
+
   <div class="col-md-12" style="background-color: #000; margin-bottom: 2em">
   
       <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s"><u>Contact Me</u></h1></center>
@@ -28,7 +35,7 @@
 	          {{Form::label('email', "Please Enter Email Address", ['class' => 'errs'])}}<br/>
 	          {{Form::email('email', null, ['class' => 'redform-control', 'placeholder' => "Email Address"])}} 
 	        @else
-	          {{Form::email('email', null, ['class' => 'form-control', 'placeholder' => "Email Address"])}} 
+	          {{Form::email('email', null, ['class' => 'form-control', 'placeholder' => "Email Addresscdc"])}} 
 	        @endif
   		  </div>
 		  <div class="form-group">

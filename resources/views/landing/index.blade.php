@@ -6,7 +6,7 @@
       <div>
         <img style="margin-top: 25%;" class="animated fadeInDown" src="{{url('img/logo_white_sm.png')}}">
         <h1 class="animated fadeInUp introName"><strong>Duncan McLeod Fraiser Jr.</strong></h1>
-        <h3 style="color: #fff;" class="animated fadeInUpBig introTitle">Full Stack Developer</h3>
+        <h3 class="animated fadeInUpBig introTitle">Full Stack Developer</h3>
       </div>
     </div>
 
@@ -76,9 +76,9 @@
 
     <div class="col-md-12 tools">
       <div class="col-md-9 col-md-offset-3">
-          <h1 class="os-animation" style="color: #fff" data-os-animation="fadeIn" data-os-animation-delay="0s"><u>Development Tools</u></h1>
+          <h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s"><u>Development Tools</u></h1>
       </div>
-      <div class="col-md-3 col-md-offset-3" style="color: #fff">
+      <div class="col-md-3 col-md-offset-3">
         <ul style="font-size: 2em">
           <li class="os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">Ajax</li>
           <li class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s">Blade</li>
@@ -89,7 +89,7 @@
           <li class="os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0.3s">Java</li>
         </ul>
       </div>
-      <div class="col-md-3" style="color: #fff">
+      <div class="col-md-3">
         <ul style="font-size: 2em">
           <li class="os-animation" data-os-animation="fadeInRight" data-os-animation-delay="0s">JavaScript</li>
           <li class="os-animation" data-os-animation="fadeInLeft" data-os-animation-delay="0.6s">jQuerry</li>
@@ -113,10 +113,10 @@
 
     <div class="col-md-12 work">
 
-      <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s" style="color: #fff; margin-bottom: 1.5em"><u>Work Examples</u></h1></center>
+      <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s" style="margin-bottom: 1.5em"><u>Work Examples</u></h1></center>
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-        <a href="">
+        <a href="{{url('/work/1')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/kennykens.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Kenny Kens<br/>and the<br/>Brown Bottle Boys</p>
@@ -126,16 +126,17 @@
 
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
-        <a href="">
+        <a href="{{url('/work/2')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/learningCenter.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">St. Paul<br/>Early<br/>Learning Center</p>
+
+            <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Early<br/>Learning Center</p>
           </div>
         </a>
       </div>
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".7s">
-        <a href="">
+        <a href="{{url('/work/3')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/stPaul.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Catholic<br/>Church</p>
@@ -145,7 +146,7 @@
 
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".9s">
-        <a href="">
+        <a href="{{url('/work/4')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/ergon.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Ergon, Inc.<br/>Work Related<br/>Websites</p>

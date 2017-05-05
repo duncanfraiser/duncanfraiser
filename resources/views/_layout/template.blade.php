@@ -12,8 +12,14 @@
     <script src="{{ asset('/js/bootstrap.js') }}"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
+    <script src="https://use.fontawesome.com/b65a938b7e.js"></script>
 {{-- google fonts for mobile view --}}
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+
+
+
 
 
 
@@ -68,10 +74,10 @@ $('.toBeAnimated').addClass('animated fadeInLeft');
   </head>
   <body>
       <div class="loader"></div>
-          @include('_includes.navbar')
-{{--     @include('_includes.nav')
- --}}    @yield('content')
-{{--     @include('_includes.footer')
-    @yield('scripts')  --}}
+        @include('_includes.navbar')
+{{--    @include('_includes.nav') --}}
+        @yield('content')
+        @yield('scripts')
+{{--    @include('_includes.footer')  --}}
   </body>
 </html>

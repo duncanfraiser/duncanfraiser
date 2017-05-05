@@ -19,6 +19,9 @@ Route::resource('/', 'LandingController');
 Route::resource('/resume', 'ResumeController');
 Route::resource('/contact', 'ContactController');
 Route::get('/contact/{id}/thanks', 'ContactController@thanks');
+Route::resource('/work', 'WorkController');
+Route::resource('/test', 'TestController');
+Route::resource('/project', 'ProjectController');
 
 
 
