@@ -15,6 +15,23 @@
         }
     }
 
+a{
+    color: #fff;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 
 /*work image text when hovering*/
 .img__wrap {

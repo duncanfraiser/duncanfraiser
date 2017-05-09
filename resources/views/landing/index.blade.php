@@ -14,7 +14,7 @@
     {{-- About Me --}}    
     <div class="col-md-12 about" style="background:transparent;">
       <div class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.0s">
-        <h1><center><u>About Me</u></center></h1>
+        <h1><center>About Me</center></h1>
       </div>
       <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.1s">
         <center><img src="{{'img/profile.jpg'}}" class="image img-circle img-responsive flex-center"></center>
@@ -76,7 +76,7 @@
 
     <div class="col-md-12 tools">
       <div class="col-md-9 col-md-offset-3">
-          <h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s"><u>Development Tools</u></h1>
+          <h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Development Tools</h1>
       </div>
       <div class="col-md-3 col-md-offset-3">
         <ul style="font-size: 2em">
@@ -113,7 +113,7 @@
 
     <div class="col-md-12 work">
 
-      <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s" style="margin-bottom: 1.5em"><u>Work Examples</u></h1></center>
+      <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s" style="margin-bottom: 1.5em">Work Examples</h1></center>
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
         <a href="{{url('/project/kennykens')}}">
