@@ -9,8 +9,10 @@ class Section extends Model
 {
       use SoftDeletes;
       protected $fillable = [
+   			'project_id',
    			'title',
    			'content',
+   			'img',
         ];
 
 

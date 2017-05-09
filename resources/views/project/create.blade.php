@@ -57,7 +57,7 @@ $(document).ready(function() {
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
             $(wrapper).append(
-            '<div style="margin-top:5em"><input class="form-control" placeholder="Section Title" type="text" name="sectionTitles[]"/><textarea class="form-control" rows="4" style="margin-top: 15px" placeholder="Section Content" type="text" step="1" name="sectionContents[]"/></textarea><a href="#" class="remove_field"><i class="fa fa-minus-circle fa-2x minus" aria-hidden="true"></i></a></div>'
+            '<div><input class="form-control" placeholder="Section Title" type="text" name="sectionTitles[]"/><textarea class="form-control" rows="4" style="margin-top: 15px" placeholder="Section Content" type="text" step="1" name="sectionContents[]"/></textarea><a href="#" class="remove_field"><i class="fa fa-minus-circle fa-2x minus" aria-hidden="true"></i></a></div>'
             ); //add input box
 
         }

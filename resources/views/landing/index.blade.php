@@ -116,7 +116,7 @@
       <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s" style="margin-bottom: 1.5em"><u>Work Examples</u></h1></center>
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-        <a href="{{url('/work/1')}}">
+        <a href="{{url('/project/kennykens')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/kennykens.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Kenny Kens<br/>and the<br/>Brown Bottle Boys</p>
@@ -126,7 +126,7 @@
 
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
-        <a href="{{url('/work/2')}}">
+        <a href="{{url('/project/learningcenter')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/learningCenter.png')}}" />
 
@@ -136,7 +136,7 @@
       </div>
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".7s">
-        <a href="{{url('/work/3')}}">
+        <a href="{{url('/project/stpaul')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/stPaul.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Catholic<br/>Church</p>
@@ -146,7 +146,7 @@
 
 
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".9s">
-        <a href="{{url('/work/4')}}">
+        <a href="{{url('/project/ergon')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/ergon.png')}}" />
             <p class="img__description flex-center" style="margin: 0">Ergon, Inc.<br/>Work Related<br/>Websites</p>

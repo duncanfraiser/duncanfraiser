@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Section;
 
 class SectionController extends Controller
 {
@@ -79,6 +80,10 @@ class SectionController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        $section = Section::findOrFail($id);
+
+        $section->delete();
+        return redirect('/project/'.$section->project_id.'/edit');
     }
 }
