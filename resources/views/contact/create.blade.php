@@ -19,7 +19,7 @@
 
   <div class="col-md-12" style="background-color: #000; margin-bottom: 2em">
   
-      <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s"><u>Contact Me</u></h1></center>
+      <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">Contact Me</h1></center>
       <div class="col-md-6 col-md-offset-3">
       {{Form::open(['action' => 'ContactController@store'])}}
           <div class="form-group">
