@@ -11,18 +11,51 @@
   <div class="col-md-8 col-md-offset-2 project">
     <h2><u>Edit {{$project->name}}</u></h2>
     {{Form::model($project, ['method' => 'PATCH', 'files' => true, 'action' => ['ProjectController@update', $project->id]])}}
+
+
+
       <div class="form-group">
         {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
       </div>
 
+
+      <div class="form-group">
+        {{ Form::label('imgmg', 'Current Image: '. $project->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
+        {{ Form::label('img', 'Upload Landing Page Image:',['style' => 'font-weight: normal'])}}
+        {{ Form::file('img')}}
+      </div>
+
+
+
+
       @foreach($project->sections as $section)
+
+
+
+
         <input type="hidden" name="sectionExistingIds[]" value="{{$section->id}}">
+
+
+
         <div class="form-group" style="margin-top: 2em">
-     			<input class="form-control" placeholder="Section Title" type="text" name="sectionExistingTitles[]" value="{{$section->title}}"/>
+          {{Form::text('sectionTitles[]', $section->title, ['class' => 'form-control', 'placeholder' => "Section Title"])}}
      		</div>
+
+
      		<div class="form-group">
-       		<textarea class="form-control" rows="4"  type="textarea" step="1" name="sectionExistingContents[]">{{$section->content}}</textarea>
+          {{Form::textarea('sectionContents[]', $section->content, ['class' => 'form-control', 'placeholder' => "Describe section content here..."])}}
      		</div>
+        <div class="form-group" style="margin: 0px">       
+         {{ Form::checkbox('dels[]', $section->id) }}<h4 class="toollable">Delete Section</h4>
+        </div>
+        <div class="form-group">
+          {{ Form::label('sectionImg', 'Current Image: '. $section->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
+          {{ Form::label('sectionImg', 'Choose Replacement Image',['style' => 'font-weight: normal', 'type' => 'file'])}}
+          {{ Form::file('sectionImg[]')}}
+        </div>
+
+
+
       @endforeach
 
       <div class="input_fields_wrap">
@@ -77,7 +110,13 @@ $(document).ready(function() {
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
             $(wrapper).append(
-            '<div><input class="form-control" placeholder="Section Title" type="text" name="sectionTitles[]"/><textarea class="form-control" rows="4" style="margin-top: 15px" placeholder="Section Content" type="text" step="1" name="sectionContents[]"/></textarea><a href="#" class="remove_field"><i class="fa fa-minus-circle fa-2x minus" aria-hidden="true"></i></a></div>'
+              `<div class="form-group">
+                {{Form::text('newSectionTitles[]', null, ['class' => 'form-control', 'style' => 'margin-bottom: 15px', 'placeholder' => "Section Title"])}}
+                {{Form::textarea('newSectionContents[]', null, ['class' => 'form-control', 'style' => 'margin-bottom: 15px', 'placeholder' => "Describe section content here..."])}}
+                {{ Form::label('newSectionImg', 'Upload Landing Page Image:',['style' => 'font-weight: normal'])}}
+                {{ Form::file('newSectionImg[]',['style' => 'margin-bottom: 15px'])}}
+                <a href="#" class="remove_field"><i class="fa fa-minus-circle fa-2x minus" style="margin-bottom: 15px" aria-hidden="true"></i></a>
+              </div>`
             ); //add input box
 
         }
