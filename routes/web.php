@@ -15,7 +15,8 @@
 //     return view('welcome');
 // });
 
-Route::resource('/', 'LandingController');
+Route::get('/', 'LandingController@index');
+Route::resource('/landing', 'LandingController');
 Route::resource('/resume', 'ResumeController');
 Route::resource('/contact', 'ContactController');
 Route::get('/contact/{id}/thanks', 'ContactController@thanks');

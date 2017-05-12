@@ -14,48 +14,24 @@
       <div class="form-group">
         {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
       </div>
-              <div class="form-group">
-          {{ Form::label('img', 'Upload Section Image:')}}
-          {{ Form::file('img')}}
-        </div>
 
-{{-- {{dd($project->sections)}} --}}
       @foreach($project->sections as $section)
         <input type="hidden" name="sectionExistingIds[]" value="{{$section->id}}">
         <div class="form-group" style="margin-top: 2em">
-     			<input class="form-control" placeholder="Section Title" type="text" name="sectionExistingTitles[]" value="{{$section->title}}" />
+     			<input class="form-control" placeholder="Section Title" type="text" name="sectionExistingTitles[]" value="{{$section->title}}"/>
      		</div>
      		<div class="form-group">
        		<textarea class="form-control" rows="4"  type="textarea" step="1" name="sectionExistingContents[]">{{$section->content}}</textarea>
      		</div>
-        <div class="form-group">
-          {{ Form::label('img[]', 'Upload Section Image:')}}
-          {{ Form::file('img')}}
-        </div>
-
-        <div class="form-group">
-          {{Form::open(['method' => 'DELETE', 'route' => ['section.destroy', $section->id], 'class' => 'delete'])}}
-            {{Form::submit('Delete', ['class' => 'formbtn'])}}
-          {{Form::close()}}
-        </div>
-
-
-
       @endforeach
 
       <div class="input_fields_wrap">
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
       </div>
-
-
-
-
-
-
       <div class="col-md-12 form-group" style="margin: 1.5em; ">
         {{Form::submit('Submit', ['class' => 'btn'])}}
       </div>
-          {{Form::close()}}
+    {{Form::close()}}
   </div>
 
 

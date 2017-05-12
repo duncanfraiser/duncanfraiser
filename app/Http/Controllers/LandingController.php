@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Landing;
+use App\Tool;
 
 class LandingController extends Controller
 {
@@ -13,7 +15,8 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return view('landing.index');
+        $landing=Landing::findOrFail(1);
+        return view('landing.index', compact('landing'));
     }
 
     /**
@@ -56,7 +59,26 @@ class LandingController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dirs = [
+            'fadeInLeft' => 'Fade In Left',
+            'fadeInRight' => 'Fade In Right'
+        ];
+
+        $seconds = [
+            '0.0s' => '0.0s',
+            '0.1s' => '0.1s',
+            '0.2s' => '0.2s',
+            '0.3s' => '0.3s',
+            '0.4s' => '0.4s',
+            '0.5s' => '0.5s',
+            '0.6s' => '0.6s',
+            '0.7s' => '0.7s',
+            '0.8s' => '0.8s',
+            '0.9s' => '0.9s'
+        ];
+
+        $landing=Landing::findOrFail($id);
+        return view('landing.edit', compact('landing', 'dirs', 'seconds'));
     }
 
     /**
@@ -68,7 +90,57 @@ class LandingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($request);
+
+        $landing = Landing::findOrFail($id);
+        // if($request->img != ""){
+        // $pic = request()->file('img');
+        // $pic->storeAs('public/img', $pic->getClientOriginalName());
+        // $grocery->img = $pic->getClientOriginalName();
+        // }
+        $landing->about = $request->about;
+        $landing->serv = $request->serv;
+        $landing->db = $request->db;
+        $landing->frontend = $request->frontend;
+        $landing->backend = $request->backend;
+        $landing->save();
+
+        foreach ($request->name as $key => $tool) {
+          $tool=Tool::findOrFail($request->ids[$key]);
+          $tool->landing_id=$landing->id;
+          $tool->name=($request->name[$key]);
+          $tool->delay=($request->delay[$key]);
+          $tool->direction=($request->direction[$key]);
+          $tool->save();
+        }
+
+        if($request->newName != null){
+          foreach ($request->newName as $key => $tool) {
+            $tool=new Tool;
+            $tool->landing_id=$landing->id;
+            $tool->name=($request->newName[$key]);
+            $tool->delay=($request->newDelay[$key]);
+            $tool->direction=($request->newDirection[$key]);
+            $tool->save();
+            }
+        }
+
+
+
+        if($request->dels != null){
+          foreach($request->dels as $del){
+            $tool=Tool::findOrFail($del);
+            $tool->delete();            
+          }
+        }  
+
+
+
+
+
+
+
+        return redirect('/');
     }
 
     /**

@@ -65,7 +65,12 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $project=new Project;
-        $project->fill($request->all());
+        $project->name=$request->name;
+        $pic = request()->file('img');
+        if($pic != null){
+          $pic->storeAs('public/img', $pic->getClientOriginalName()); 
+          $project->img = $pic->getClientOriginalName();
+        }
         $project->save();
 
 
@@ -180,6 +185,10 @@ dd($request);
      */
     public function destroy($id)
     {
-        //
+
+        $project = Project::findOrFail($id);
+
+        $project->delete();
+        return redirect('/');
     }
 }

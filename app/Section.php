@@ -13,6 +13,7 @@ class Section extends Model
    			'title',
    			'content',
    			'img',
+        'ids'
         ];
 
 

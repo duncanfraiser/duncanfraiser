@@ -15,6 +15,7 @@
         }
     }
 
+
 a{
     color: #fff;
 }
@@ -32,6 +33,35 @@ a:active {
     text-decoration: none;
 }
 
+i {
+        font-family: 'Raleway', sans-serif;
+}
+
+
+
+.toollable{
+    display: inline-block;
+    color: red;
+    padding-left: 7px;
+    font-weight:700;
+}
+
+
+
+.dropdown-menu {
+    color:#fff;
+    background-color: #000;
+    }
+.dropdown-menu>li>a {
+    color:#fff;
+}
+
+
+.landedit{
+    background:transparent;
+    margin: 0px;
+    padding: 0px;
+}
 
 /*work image text when hovering*/
 .img__wrap {
@@ -64,6 +94,10 @@ a:active {
   opacity: 1;
 }
 
+.addtool{
+    margin:3.5px;
+}
+
 
 
 .project{
@@ -74,18 +108,30 @@ a:active {
 
 .plus{
     color:#337ab7;
-        margin: 0em 0em .5em 0em;
-    float:right;
+    margin: 0em .5em .5em 0em;
 }
 
 .minus{
     color:red;
-    margin: .5em 0;
-    float:right;
+    margin: 0em 0;
+
 }
 
 .form-control{
     color:red;
+    background-color: #000;
+    border-radius: 0px;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+
+.blue{
+background-color: blue;
+color: blue;
+border-radius: 0px;
 }
 
 
@@ -344,7 +390,10 @@ a:active {
         padding: 1em;
         }
     }
-
+    
+    .toolinput{
+        padding-top: 1px;
+    }
 
 /*these styles hides the animation untill it fires*/
 .os-animation{
@@ -443,7 +492,7 @@ h3 {
     color:#fff;
     background-color: #000;
     font-weight: bold;
-    float: right;
+/*    float: right;*/
     border: solid 1px #fff;
     border-radius: 0px;
 }
