@@ -104,7 +104,8 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $project=Project::findOrFail($id);
+        return view('project.show', compact('project'));
     }
 
     /**
@@ -117,7 +118,7 @@ class ProjectController extends Controller
     {
         $project=Project::findOrFail($id);
 
-        return view('project.edit',compact('project'));
+        return view('project.edit', compact('project'));
     }
 
     /**
