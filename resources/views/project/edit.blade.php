@@ -9,7 +9,7 @@
   </div>
 
   <div class="col-md-8 col-md-offset-2 project">
-    <h2><u>Edit {{$project->name}}</u></h2>
+    <h2>Edit {{$project->name}}</h2>
     {{Form::model($project, ['method' => 'PATCH', 'files' => true, 'action' => ['ProjectController@update', $project->id]])}}
 
 
@@ -17,7 +17,9 @@
       <div class="form-group">
         {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
       </div>
-
+      <div class="form-group">
+        {{Form::text('link', null, ['class' => 'form-control', 'placeholder' => "Link To Project"])}}
+      </div>
 
       <div class="form-group">
         {{ Form::label('imgmg', 'Current Image: '. $project->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>

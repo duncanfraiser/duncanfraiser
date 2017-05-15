@@ -98,19 +98,36 @@
 
     <div class="col-md-12 work">
 
+
+
       <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Work Examples</h1></center>
 
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-        <a href="{{url('/project/kennykens')}}">
+      
+
+
+      @foreach($projects as $key => $project)
+      
+
+
+      
+
+
+
+      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
+        <a href="{{url('/project/'.$project->id)}}">
           <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/kennykens.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">Kenny Kens<br/>and the<br/>Brown Bottle Boys</p>
+            <img class="img__img" style="width:100%" src="{{url('storage/img/'.$project->img)}}" />
+            <p class="img__description flex-center" style="margin: 0">{{$project->name}}</p>
           </div>
         </a>
       </div>
 
 
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
+
+
+      @endforeach
+
+{{--       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
         <a href="{{url('/project/learningcenter')}}">
           <div class="img__wrap">
             <img class="img__img" src="{{url('/img/learningCenter.png')}}" />
@@ -137,7 +154,7 @@
             <p class="img__description flex-center" style="margin: 0">Ergon, Inc.<br/>Work Related<br/>Websites</p>
           </div>
         </a>
-      </div>
+      </div> --}}
 
     </div>
 

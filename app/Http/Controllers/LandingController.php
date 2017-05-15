@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Landing;
 use App\Tool;
+use App\Project;
 
 class LandingController extends Controller
 {
@@ -16,7 +17,11 @@ class LandingController extends Controller
     public function index()
     {
         $landing=Landing::findOrFail(1);
-        return view('landing.index', compact('landing'));
+        $projects=Project::get();
+        $delays=['.3s','.5s','.7s','.9s'];
+
+
+        return view('landing.index', compact('landing', 'projects', 'delays'));
     }
 
     /**

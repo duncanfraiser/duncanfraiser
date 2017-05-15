@@ -10,11 +10,12 @@
 
 	  <div class="col-md-10 col-md-offset-1 project">
 	    <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-	    {{-- <h1 style="margin-bottom: 2em"><center>{{$project->name}}</center></h1> --}}
 	      <div class="col-md-12">
-	        <h1><center><a target="blank" href="http://kennykens.com/">{{$project->name}}</a></center></h1>
+	        <h1><center><a target="blank" href="{{$project->link}}">{{$project->name}}</a></center></h1>
 {{-- 	        <img src="{{url('/img/'.$project->img)}}"> --}}
-
+				@if(\Auth::check())
+				<center><a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+				@endif
 	      </div>
 
 	    </div>
@@ -35,8 +36,11 @@
 	    <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
 	    {{-- <h1 style="margin-bottom: 2em"><center>{{$project->name}}</center></h1> --}}
 	      <div class="col-md-8">
-	        <h2><center><a target="blank" href="http://kennykens.com/">{{$section->title}}</a></center></h2>
+	        <h2><center>{{$section->title}}</center></h2>
 	   		<p>{!!$section->content!!}</p>
+              @if(\Auth::check())
+				<center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+			  @endif
 	      </div>
 	      <div class="col-md-4">
 	    	<a target="blank" href="{{url('storage/img/'.$section->img)}}"><img style="width: 100%" src="{{url('storage/img/'.$section->img)}}"></a>
@@ -61,6 +65,9 @@
       <div class="col-md-8">
     	<h2><center>{{$section->title}}</center></h2>
     		<p>{!!$section->content!!}</p>
+    		  @if(\Auth::check())
+				<center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+			  @endif
       </div>
     </div>
   </div>

@@ -17,6 +17,9 @@
         {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
       </div>
 
+      <div class="form-group">
+        {{Form::text('link', null, ['class' => 'form-control', 'placeholder' => "Link To Project"])}}
+      </div>
 
 
       <div class="form-group">
