@@ -39,7 +39,7 @@
 	   		<p>{!!$section->content!!}</p>
 	      </div>
 	      <div class="col-md-4">
-	    	<a target="blank" href="{{url('/img/'.$section->img)}}"><img style="width: 100%" src="{{url('/img/'.$section->img)}}"></a>
+	    	<a target="blank" href="{{url('storage/img/'.$section->img)}}"><img style="width: 100%" src="{{url('/img/'.$section->img)}}"></a>
 	      </div>
 	    </div>
 	  </div>
@@ -56,7 +56,7 @@
   <div class="col-md-10 col-md-offset-1 project">
     <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
       <div class="col-md-4">
-    	<a target="blank" href="{{url('/img/'.$section->img)}}"><img style="width: 100%" src="{{url('/img/'.$section->img)}}"></a>
+    	<a target="blank" href="{{url('storage/img/'.$section->img)}}"><img style="width: 100%" src="{{url('/img/'.$section->img)}}"></a>
       </div>
       <div class="col-md-8">
     	<h2><center>{{$section->title}}</center></h2>
