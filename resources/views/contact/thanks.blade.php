@@ -21,8 +21,6 @@
     <div class="mydeskBW" >
     </div>
   </div>
-  <div class="col-md-12 foots">
-    <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
-  </div>
+
 </div>
 @endsection

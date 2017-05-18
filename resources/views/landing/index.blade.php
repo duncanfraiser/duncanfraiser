@@ -25,10 +25,7 @@
     </div>
 
     {{-- black and white desk img spacer --}}
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskBW">
-      </div>
-    </div>
+    @include('_includes.bwDesk')
 
 
     {{-- Full Stack Skills --}}
@@ -59,10 +56,7 @@
 
 
     {{-- color desk img spacer --}}
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskColor">
-      </div>
-    </div>
+    @include('_includes.colorDesk')
 
     <div class="col-md-12 tools">
       <div class="col-md-9 col-md-offset-3">
@@ -89,86 +83,28 @@
     </div>
 
     {{-- black and white desk img spacer --}}
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskBW">
-      </div>
-    </div>
+    @include('_includes.bwDesk')
 
 
-
+    {{-- Work Examples --}}
     <div class="col-md-12 work">
-
-
-
       <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Work Examples</h1></center>
-
-      
-
-
       @foreach($projects as $key => $project)
-      
-
-
-      
-
-
-
       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
         <a href="{{url('/project/'.$project->id)}}">
           <div class="img__wrap">
             <img class="img__img" style="width:100%" src="{{url('storage/img/'.$project->img)}}" />
-            <p class="img__description flex-center" style="margin: 0">{{$project->name}}</p>
+            <p class="img__description flex-center" style="margin: 0; padding: .5em">{{$project->name}}</p>
           </div>
         </a>
       </div>
-
-
-
-
       @endforeach
-
-{{--       <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
-        <a href="{{url('/project/learningcenter')}}">
-          <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/learningCenter.png')}}" />
-
-            <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Early<br/>Learning Center</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".7s">
-        <a href="{{url('/project/stpaul')}}">
-          <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/stPaul.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Catholic<br/>Church</p>
-          </div>
-        </a>
-      </div>
-
-
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".9s">
-        <a href="{{url('/project/ergon')}}">
-          <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/ergon.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">Ergon, Inc.<br/>Work Related<br/>Websites</p>
-          </div>
-        </a>
-      </div> --}}
-
     </div>
 
     {{-- color desk img spacer --}}
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskColor">
-      </div>
-    </div>
+    @include('_includes.colorDesk')
 
 
-
-    <div class="col-md-12 foots">
-      <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
-    </div>
 
 
 

@@ -1,22 +1,7 @@
 @extends('_layout.template')
 @section('content')
-
-
 <div class="container-fluid" style="padding: 0">
-
-  <div class="col-md-12" style="padding: 0">
-    <div class="mydeskColor">
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
+@include('_includes.colorDesk')
   <div class="col-md-12" style="background-color: #000; margin-bottom: 2em">
   
       <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">Contact Me</h1></center>
@@ -54,29 +39,13 @@
 	          {{Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => "Write Something"])}} 
 	        @endif
 		  </div>
-      	  <div class="form-group" >
-            {{Form::submit('Send', ['class' => 'btn'])}}
+      	  <div class="form-group">
+            {{Form::submit('Send', ['class' => 'btn', 'style' => 'float:right'])}}
           </div>
       {{Form::close()}}
       </div>
     
   </div>
-
-
-
-
-
-
-
-  <div class="col-md-12" style="padding: 0">
-    <div class="mydeskBW" >
-    </div>
-  </div>
-
-  <div class="col-md-12 foots">
-    <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
-  </div>
-
-
+@include('_includes.bwDesk')
 </div>
 @endsection

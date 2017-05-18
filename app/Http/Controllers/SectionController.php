@@ -57,7 +57,8 @@ class SectionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $section=Section::findOrFail($id);
+        return view('section.edit', compact('section'));
     }
 
     /**
@@ -69,7 +70,12 @@ class SectionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $section=Section::findOrFail($id);
+        $section->title=$request->title;
+        $section->content=$request->content;
+        $section->save();
+        return redirect('/project/'.$section->project_id);
+
     }
 
     /**
@@ -84,6 +90,6 @@ class SectionController extends Controller
         $section = Section::findOrFail($id);
 
         $section->delete();
-        return redirect('/project/'.$section->project_id.'/edit');
+        return redirect('/project/'.$section->project_id);
     }
 }

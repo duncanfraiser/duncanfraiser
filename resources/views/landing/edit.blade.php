@@ -1,5 +1,6 @@
 @extends('_layout.template')
 @section('content')
+
     {{-- desk pic and my name fade in intro --}}
     <div class="container-fluid content mydesk">
       <div>
@@ -8,11 +9,9 @@
         <h3 class="animated fadeInUpBig introTitle">Full Stack Developer</h3>
       </div>
     </div>
+
     {{-- About Me --}}    
     <div class="col-md-12 landedit">
-    
-
-
       <div class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.0s">
         <h1><center>About Me</center></h1>
       </div>
@@ -40,21 +39,18 @@
                 {{Form::textarea('serv', null, ['class' => 'form-control', 'placeholder' => 'Server Content'])}}
               </div>
           </div>
-
           <div class="col-md-3 os-animation skill" data-os-animation="fadeInDown" data-os-animation-delay="0.8s">
             <h2>Database</h2>
               <div class="form-group">    
                 {{Form::textarea('db', null, ['class' => 'form-control', 'placeholder' => 'Database Content'])}}
               </div>
           </div>
-
           <div class="col-md-3 os-animation skill" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
             <h2>Backend</h2>
               <div class="form-group">    
                 {{Form::textarea('backend', null, ['class' => 'form-control', 'placeholder' => 'Server Content'])}}
               </div>
           </div>
-
            <div class="col-md-3 os-animation skill" data-os-animation="fadeInRight" data-os-animation-delay="1.4s">
             <h2>Frontend</h2>
               <div class="form-group">    
@@ -64,8 +60,6 @@
         </div>
     </div>
 
-
-
     {{-- color desk img spacer --}}
     <div class="col-md-12" style="padding: 0">
       <div class="mydeskColor">
@@ -73,7 +67,7 @@
     </div>
 
 
-
+    {{-- Development Tools --}}
     <div class="col-md-12 tools">
       <div class="col-md-9 col-md-offset-3">
         <h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Development Tools</h1>
@@ -100,25 +94,9 @@
           {{Form::submit('Submit', ['class' => 'btn'])}}
         </div>
       </div>
-    </div>
-
-
-    
-
-
-
- 
+    </div> 
     {{Form::close()}}
    </div> 
-
-
-  
-
-
-
-
-
-
 
     {{-- black and white desk img spacer --}}
     <div class="col-md-12" style="padding: 0">
@@ -126,70 +104,21 @@
       </div>
     </div>
 
-
+    {{-- Work Examples --}}
     <div class="col-md-12 work">
-
       <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Work Examples</h1></center>
-
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-        <a href="{{url('/project/kennykens')}}">
+      @foreach($projects as $key => $project)
+      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
+        <a href="{{url('/project/'.$project->id.'/edit')}}">
           <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/kennykens.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">Kenny Kens<br/>and the<br/>Brown Bottle Boys</p>
+            <img class="img__img" style="width:100%" src="{{url('storage/img/'.$project->img)}}" />
+            <p class="img__description flex-center" style="margin: 0; padding: .5em; color: red; font-weight: bold;">Edit <br/>{{$project->name}}</p>
           </div>
         </a>
       </div>
-
-
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".5s">
-        <a href="{{url('/project/learningcenter')}}">
-          <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/learningCenter.png')}}" />
-
-            <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Early<br/>Learning Center</p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".7s">
-        <a href="{{url('/project/stpaul')}}">
-          <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/stPaul.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">Saint Paul<br/>Catholic<br/>Church</p>
-          </div>
-        </a>
-      </div>
-
-
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay=".9s">
-        <a href="{{url('/project/ergon')}}">
-          <div class="img__wrap">
-            <img class="img__img" src="{{url('/img/ergon.png')}}" />
-            <p class="img__description flex-center" style="margin: 0">Ergon, Inc.<br/>Work Related<br/>Websites</p>
-          </div>
-        </a>
-      </div>
-
+      @endforeach
     </div>
-
-    {{-- color desk img spacer --}}
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskColor">
-      </div>
-    </div>
-
-
-
-    <div class="col-md-12 foots">
-      <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
-    </div>
-
-
-
-
 @endsection
-
-
 
 @section('scripts')  
 <script>

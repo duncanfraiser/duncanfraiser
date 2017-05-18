@@ -102,7 +102,7 @@ i {
 
 .project{
     background-color: #000;
-    padding: 2em;
+    padding: 2em 0em;
 
 }
 
@@ -260,6 +260,41 @@ border-radius: 0px;
     }
 
 /* NAVBAR Styles */
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 2px;
+}
+
+
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: red;
+    background-color: #000;
+    margin: 0px;
+    border-bottom: 0px;
+        font-weight: normal;
+}
+
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #eee;
+    border-top: solid 2px #fff;
+}
+
+.navbar ul.nav > li > a:hover {
+    color: #fff;
+    border-top: solid 0px red;
+    border-bottom: solid 0px red;
+}
+
+.dropdown-menu> {
+    margin: 100px;
+}
+
+.dropdown-menu>li>a {
+    margin: 10px;
+}
+
     .navbar {
         border-bottom: solid 1px #fff;
         min-height: 55px;
@@ -333,14 +368,24 @@ border-radius: 0px;
 
 
 /*FOOTER*/
+.icons{
+        margin: 10px 0px;
+}
+
+.icons img{
+    margin: 10px;
+    width:30px;
+}
+
+
 .foots{
-    min-height: 54px;
+    min-height: 40px;
     border-top: solid 1px #fff;
     color: #fff;
 }
 
 .footData{
-    margin: 10px 100px;
+    margin: 0px 10px 10px 0px;
     float: right;
 }
     @media (max-width: 767px) {
@@ -493,6 +538,7 @@ h3 {
     background-color: #000;
     font-weight: bold;
 /*    float: right;*/
+    margin: 5px;
     border: solid 1px #fff;
     border-radius: 0px;
 }

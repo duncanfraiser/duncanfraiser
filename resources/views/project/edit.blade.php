@@ -7,82 +7,116 @@
     <div class="mydeskColor">
     </div>
   </div>
+    <div class="col-md-10 col-md-offset-1 project">
+      <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
+        <div class="col-md-12">
+          <h1><center><a target="blank" href="{{$project->link}}">Edit {{$project->name}}</a></center></h1>
+        </div>
 
-  <div class="col-md-8 col-md-offset-2 project">
-    <h2>Edit {{$project->name}}</h2>
-    {{Form::model($project, ['method' => 'PATCH', 'files' => true, 'action' => ['ProjectController@update', $project->id]])}}
-
-
-
-      <div class="form-group">
-        {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
       </div>
-      <div class="form-group">
-        {{Form::text('link', null, ['class' => 'form-control', 'placeholder' => "Link To Project"])}}
+    </div>
+    {{-- black and white desk img spacer --}}
+    <div class="col-md-12" style="padding: 0">
+      <div class="mydeskBW">
       </div>
+    </div>
 
-      <div class="form-group">
-        {{ Form::label('imgmg', 'Current Image: '. $project->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
-        {{ Form::label('img', 'Upload Landing Page Image:',['style' => 'font-weight: normal'])}}
-        {{ Form::file('img')}}
-      </div>
-
-
-
-
-      @foreach($project->sections as $section)
-
-
-
-
-        <input type="hidden" name="sectionExistingIds[]" value="{{$section->id}}">
-
-
-
-        <div class="form-group" style="margin-top: 2em">
-          {{Form::text('sectionTitles[]', $section->title, ['class' => 'form-control', 'placeholder' => "Section Title"])}}
-     		</div>
-
-
-     		<div class="form-group">
-          {{Form::textarea('sectionContents[]', $section->content, ['class' => 'form-control', 'placeholder' => "Describe section content here..."])}}
-     		</div>
-        <div class="form-group" style="margin: 0px">       
-         {{ Form::checkbox('dels[]', $section->id) }}<h4 class="toollable">Delete Section</h4>
+    {{-- Edit form --}}
+    <div class="col-md-12 project">    
+      {{Form::model($project, ['method' => 'PATCH', 'files' => true, 'action' => ['ProjectController@update', $project->id]])}}
+      <div class="col-md-8 col-md-offset-2"">
+        <div class="form-group">
+          {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
         </div>
         <div class="form-group">
-          {{ Form::label('sectionImg', 'Current Image: '. $section->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
-          {{ Form::label('sectionImg', 'Choose Replacement Image',['style' => 'font-weight: normal', 'type' => 'file'])}}
-          {{ Form::file('sectionImg[]')}}
+          {{Form::text('link', null, ['class' => 'form-control', 'placeholder' => "Link To Project"])}}
         </div>
-
-
-
-      @endforeach
-
-      <div class="input_fields_wrap">
-        <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
+        <div class="form-group">
+          <img style="width: 25%" src="{{url('/img/'.$project->img)}}"><br/>
+          {{ Form::label('imgmg', 'Current Image: '.$project->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
+          {{ Form::label('img', 'Upload New Landing Page Image:',['style' => 'font-weight: normal'])}}
+          {{ Form::file('img')}}
+        </div>
       </div>
-      <div class="col-md-12 form-group" style="margin: 1.5em; ">
-        {{Form::submit('Submit', ['class' => 'btn'])}}
+      
+      {{-- color desk img spacer --}}
+      <div class="col-md-12" style="padding: 0">
+        <div class="mydeskColor">
+        </div>
       </div>
-    {{Form::close()}}
-  </div>
 
 
 
 
-
-  {{-- black and white desk img spacer --}}
+      @foreach($project->sections as $key => $section)
+        @if($key % 2 == 0) {{-- checks for even index --}}
+          <input type="hidden" name="sectionExistingIds[]" value="{{$section->id}}">
+          <div class="col-md-8 col-md-offset-2"">
+            <div class="form-group" style="margin-top: 2em">
+              {{Form::text('sectionTitles[]', $section->title, ['class' => 'form-control', 'placeholder' => "Section Title"])}}
+     		    </div>
+       		  <div class="form-group">
+              {{Form::textarea('sectionContents[]', $section->content, ['class' => 'form-control', 'placeholder' => "Describe section content here..."])}}
+       		  </div>
+            <div class="form-group">
+              <img style="width: 25%" src="{{url('/img/'.$section->img)}}"><br/>
+              {{ Form::label('sectionImg', 'Current Image: '. $section->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
+              {{ Form::label('sectionImg', 'Choose Replacement Image',['style' => 'font-weight: normal', 'type' => 'file'])}}
+              {{ Form::file('sectionImg[]')}}
+            </div>
+            <div class="form-group" style="margin: 0px 0px 2em 0px">       
+              {{ Form::checkbox('dels[]', $section->id) }}<h4 class="toollable">Delete Section</h4>
+            </div>
+          </div>
+            {{-- black and white desk img spacer --}}
   <div class="col-md-12" style="padding: 0">
     <div class="mydeskBW">
     </div>
   </div>
 
-  {{-- Footer --}}
-  <div class="col-md-12 foots">
-    <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
+        @endif
+         @if($key %2==1) {{-- checks for odd index --}}
+          <input type="hidden" name="sectionExistingIds[]" value="{{$section->id}}">
+          <div class="col-md-8 col-md-offset-2"">
+            <div class="form-group" style="margin-top: 2em">
+              {{Form::text('sectionTitles[]', $section->title, ['class' => 'form-control', 'placeholder' => "Section Title"])}}
+            </div>
+            <div class="form-group">
+              {{Form::textarea('sectionContents[]', $section->content, ['class' => 'form-control', 'placeholder' => "Describe section content here..."])}}
+            </div>
+            <div class="form-group">
+              <img style="width: 25%" src="{{url('/img/'.$section->img)}}"><br/>
+              {{ Form::label('sectionImg', 'Current Image: '. $section->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
+              {{ Form::label('sectionImg', 'Choose Replacement Image',['style' => 'font-weight: normal', 'type' => 'file'])}}
+              {{ Form::file('sectionImg[]')}}
+            </div>
+            <div class="form-group" style="margin: 0px 0px 2em 0px">       
+              {{ Form::checkbox('dels[]', $section->id) }}<h4 class="toollable">Delete Section</h4>
+            </div>
+          </div>
+          {{-- color desk img spacer --}}
+          {{-- color desk img spacer --}}
+          <div class="col-md-12" style="padding: 0">
+            <div class="mydeskColor">
+            </div>
+          </div>
+        @endif
+      @endforeach
+<div class='col-md-8 col-md-offset-2'>
+
+      <div class="input_fields_wrap">
+        <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"> <span style="font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">Add Additional Section</span></i><br/>
+      </div>
+      <div class="col-md-12 form-group" style="margin: 1.5em; ">
+        {{Form::submit('Submit', ['class' => 'btn', 'style' => 'float:right'])}}
+      </div>
+    {{Form::close()}}
+    </div>
   </div>
+
+
+
+
 
 </div>
 

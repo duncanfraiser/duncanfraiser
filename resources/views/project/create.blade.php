@@ -3,10 +3,7 @@
 <div class="container-fluid" style="padding: 0">
 
   {{-- color desk img spacer --}}
-  <div class="col-md-12" style="padding: 0">
-    <div class="mydeskColor">
-    </div>
-  </div>
+  @include('_includes.colorDesk')
 
   <div class="col-md-8 col-md-offset-2 project">
     <h2>Add A Project</h2>
@@ -52,22 +49,20 @@
 
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
       </div>
-      <div class="col-md-12 form-group" style="margin: 1.5em; padding-right: o;">
+      <div class="col-md-12 form-group" style="margin: 1.5em; padding-right: 0;">
         {{Form::submit('Submit', ['class' => 'btn'])}}
       </div>
     {{Form::close()}}
   </div>
 
   {{-- black and white desk img spacer --}}
-  <div class="col-md-12" style="padding: 0">
-    <div class="mydeskBW">
-    </div>
-  </div>
+  @include('_includes.bwDesk')
 
-  {{-- Footer --}}
-  <div class="col-md-12 foots">
-    <p class="footData">&copy; 2017 Duncan Fraiser Jr.</p>
-  </div>
+
+
+
+
+
 
 </div>
 @endsection

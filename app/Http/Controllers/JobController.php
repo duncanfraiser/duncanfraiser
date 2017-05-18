@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use App\Job;
-use App\Bullet;
 
-class ResumeController extends Controller
+use Illuminate\Http\Request;
+
+class JobController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class ResumeController extends Controller
      */
     public function index()
     {
-        return view('resume.index');
+        //
     }
 
     /**
@@ -24,7 +23,7 @@ class ResumeController extends Controller
      */
     public function create()
     {
-        return view('resume.create');
+        //
     }
 
     /**
@@ -35,19 +34,7 @@ class ResumeController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        $job=new Job;
-        $job->company=$request->company;
-        $job->title=$request->title;
-        $job->startDate=$request->startDate;
-        $job->endDate=$request->endDate;
-        $job->save();
-
-        $bullet=new Bullet;
-        $bullet->job_id=$job->id;
-        $bullet->content=$request->content;
-        $bullet->save();
-
+        //
     }
 
     /**

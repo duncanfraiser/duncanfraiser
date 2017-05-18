@@ -77,6 +77,7 @@ $('.toBeAnimated').addClass('animated fadeInLeft');
         @include('_includes.navbar')
 {{--    @include('_includes.nav') --}}
         @yield('content')
+        @include('_includes.footer')
         @yield('scripts')
 {{--    @include('_includes.footer')  --}}
   </body>
