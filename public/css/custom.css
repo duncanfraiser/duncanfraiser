@@ -194,7 +194,7 @@ border-radius: 0px;
     }
 /*END df page load icon*/
 
-/*Background showing the mydesk image*/
+/*Background showing the mydexk image*/
     .mydesk{
         background: url('../img/mydesk.jpg') center center no-repeat fixed;
         -webkit-background-size: cover !important;
@@ -206,11 +206,10 @@ border-radius: 0px;
         margin:0px; 
         padding:0px
     }
- 
 
     @media (max-width: 1024px) {
         .mydesk {
-            background: url('../img/mydesk.jpg') center center no-repeat fixed;
+            background: url('../img/mydesk.jpg') center;
             -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
@@ -222,7 +221,7 @@ border-radius: 0px;
     
     @media (max-width: 767px) {
         .mydesk {
-            background: url('../img/mydesk.jpg') center center no-repeat fixed;
+            background: url('../img/mydesk.jpg') center;
             -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
