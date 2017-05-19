@@ -90,10 +90,10 @@
     <div class="col-md-12 work">
       <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Work Examples</h1></center>
       @foreach($projects as $key => $project)
-      <div class="col-md-3 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
+      <div class="col-md-3 col-sm-12 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
         <a href="{{url('/project/'.$project->id)}}">
           <div class="img__wrap">
-            <img class="img__img" style="width:100%" src="{{url('storage/img/'.$project->img)}}" />
+            <img class="img__img" style="max-width:100%" src="{{url('storage/img/'.$project->img)}}" />
             <p class="img__description flex-center" style="margin: 0; padding: .5em">{{$project->name}}</p>
           </div>
         </a>

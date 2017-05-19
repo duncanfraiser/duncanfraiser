@@ -207,36 +207,8 @@ border-radius: 0px;
         padding:0px
     }
  
- @media (max-width: 1024px) {
-        .mydesk {
-        background: url('../img/mydesk.jpg') center center no-repeat fixed;
-        -webkit-background-size: cover !important;
-        -moz-background-size: cover !important;
-        -o-background-size: cover !important;
-        background-size: cover !important;
-        min-height: 65em;
-        max-width: 100%;
-        margin:0px; 
-        padding:0px
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .mydesk {
-        background: url('../img/mydesk.jpg') center center no-repeat fixed;
-        -webkit-background-size: cover !important;
-        -moz-background-size: cover !important;
-        -o-background-size: cover !important;
-        background-size: cover !important;
-        min-height: 65em;
-        max-width: 100%;
-        margin:0px; 
-        padding:0px
-        }
-    }
 
-
-/*    @media (max-width: 1024px) {
+    @media (max-width: 1024px) {
         .mydesk {
             background: url('../img/mydesk.jpg') center center no-repeat fixed;
             -webkit-background-size: cover; 
@@ -258,7 +230,7 @@ border-radius: 0px;
             min-height: 35em;
             max-width: 100%;
         }
-    }*/
+    }
     .mydeskColor{
         background: url('../img/mydesk.jpg') center center no-repeat fixed;
         -webkit-background-size: cover;
