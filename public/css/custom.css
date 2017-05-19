@@ -210,11 +210,12 @@ border-radius: 0px;
     @media (max-width: 767px) {
         .mydesk {
             background: url('../img/mydesk.jpg') center;
- /*           -webkit-background-size: cover; 
+            -webkit-background-size: cover; 
             -moz-background-size: cover; 
             -o-background-size: cover; 
-            background-size: cover;*/
-                min-height: 35em;
+            background-size: cover;
+            min-height: 35em;
+            max-width: 100%;
         }
     }
     .mydeskColor{
@@ -225,7 +226,8 @@ border-radius: 0px;
         background-size: cover;
         min-height: 15em;
         margin:0px; 
-        padding:0px
+        padding:0px;
+        max-width: 100%;
     }
 
         @media (max-width: 767px) {
@@ -236,6 +238,8 @@ border-radius: 0px;
             -o-background-size: cover; 
             background-size: cover;
             min-height: 5em;
+            max-width: 100%;
+
         }
     }
 
@@ -247,7 +251,8 @@ border-radius: 0px;
         background-size: cover;
         min-height: 15em;
         margin:0px; 
-        padding:0px
+        padding:0px;
+        max-width: 100%;
     }
     @media (max-width: 767px) {
         .mydeskBW {
@@ -257,6 +262,7 @@ border-radius: 0px;
             -o-background-size: cover; 
             background-size: cover;
             min-height: 5em;
+            max-width: 100%;
         }
     }
 

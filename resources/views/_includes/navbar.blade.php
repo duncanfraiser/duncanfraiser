@@ -1,4 +1,4 @@
-2  {{-- navbar --}}
+{{-- navbar --}}
     <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
       <div class="container">
         <div class="navbar-header">
