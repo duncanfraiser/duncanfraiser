@@ -207,7 +207,7 @@ border-radius: 0px;
         padding:0px
     }
     
-    @media (max-width: 767px) {
+/*    @media (max-width: 767px) {
         .mydesk {
             background: url('../img/mydesk.jpg') center;
             -webkit-background-size: cover; 
@@ -217,7 +217,7 @@ border-radius: 0px;
             min-height: 35em;
             max-width: 100%;
         }
-    }
+    }*/
     .mydeskColor{
         background: url('../img/mydesk.jpg') center center no-repeat fixed;
         -webkit-background-size: cover;
@@ -230,7 +230,7 @@ border-radius: 0px;
         max-width: 100%;
     }
 
-        @media (max-width: 767px) {
+/*        @media (max-width: 767px) {
         .mydeskColor {
             background: url('../img/mydesk.jpg') center;
             -webkit-background-size: cover; 
@@ -241,7 +241,7 @@ border-radius: 0px;
             max-width: 100%;
 
         }
-    }
+    }*/
 
     .mydeskBW{
         background: url('../img/mydeskBW.jpg') center center no-repeat fixed;
@@ -254,7 +254,7 @@ border-radius: 0px;
         padding:0px;
         max-width: 100%;
     }
-    @media (max-width: 767px) {
+/*    @media (max-width: 767px) {
         .mydeskBW {
             background: url('../img/mydeskBW.jpg') center;
             -webkit-background-size: cover; 
@@ -265,7 +265,7 @@ border-radius: 0px;
             max-width: 100%;
         }
     }
-
+*/
 /* NAVBAR Styles */
 .navbar-nav>li>.dropdown-menu {
     margin-top: 2px;
