@@ -207,7 +207,7 @@ border-radius: 0px;
         padding:0px
     }
     
-/*    @media (max-width: 767px) {
+    @media (max-width: 767px) {
         .mydesk {
             background: url('../img/mydesk.jpg') center;
             -webkit-background-size: cover; 
@@ -217,7 +217,7 @@ border-radius: 0px;
             min-height: 35em;
             max-width: 100%;
         }
-    }*/
+    }
     .mydeskColor{
         background: url('../img/mydesk.jpg') center center no-repeat fixed;
         -webkit-background-size: cover;
