@@ -8,7 +8,7 @@
             <span class="icon-bar" style="background-color: #fff"></span>
             <span class="icon-bar" style="background-color: #fff"></span>
           </button>
-          <a class="navbar-brand scrollTo" href="{{url('/')}}"><img height='100%' src="{{url('/img/logo_white_sm.png')}}"></a>
+          <a class="navbar-brand scrollTo" href="{{url('/')}}"><img height='100%' src="{{url('/img/logo_white_sm.jpg')}}"></a>
         </div>
         <div class="navbar-collapse collapse" id="navigation">
           <ul class="nav navbar-nav navbar-right">

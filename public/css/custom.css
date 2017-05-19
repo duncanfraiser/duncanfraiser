@@ -196,7 +196,7 @@ border-radius: 0px;
 
 /*Background showing the mydexk image*/
     .mydesk{
-        background: url('../img/mydesk.jpg') center center no-repeat fixed;
+        background: url('../img/mydesk.png') center center no-repeat fixed;
         -webkit-background-size: cover !important;
         -moz-background-size: cover !important;
         -o-background-size: cover !important;
