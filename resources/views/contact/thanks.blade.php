@@ -10,7 +10,7 @@
   	 <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">Thanks {{$contact->name}}.</h1></center>
 
       <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-        <center><img src="{{'/img/ElvisHitler.png'}}" class="image img-circle img-responsive flex-center" style="border: solid 2px #fff"></center>
+        <center><img src="{{'/img/beard.png'}}" class="image img-circle img-responsive flex-center" style="border: solid 2px #fff"></center>
       </div>
 
   	 <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">I look forward to talking to you!</h1></center>
