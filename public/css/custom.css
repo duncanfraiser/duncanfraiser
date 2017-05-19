@@ -202,6 +202,7 @@ border-radius: 0px;
         -o-background-size: cover !important;
         background-size: cover !important;
         min-height: 65em;
+        max-width: 100%;
         margin:0px; 
         padding:0px
     }
