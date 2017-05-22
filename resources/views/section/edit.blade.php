@@ -25,7 +25,7 @@
 
 
         <div class="form-group">
-          {{Form::submit('Submit', ['class' => 'btn', 'style' => 'float:right'])}}
+          {{Form::submit('Update', ['class' => 'btn', 'style' => 'float:right'])}}
         </div>
 
     {{Form::close()}}
