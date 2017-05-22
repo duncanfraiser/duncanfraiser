@@ -32,7 +32,7 @@
           {{Form::text('link', null, ['class' => 'form-control', 'placeholder' => "Link To Project"])}}
         </div>
         <div class="form-group">
-          <img style="width: 25%" src="{{url('/img/'.$project->img)}}"><br/>
+          <img style="width: 25%" src="{{url('/storage/img/'.$project->img)}}"><br/>
           {{ Form::label('imgmg', 'Current Image: '.$project->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
           {{ Form::label('img', 'Upload New Landing Page Image:',['style' => 'font-weight: normal'])}}
           {{ Form::file('img')}}
