@@ -11,6 +11,7 @@
     <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
       <div class="col-md-12">
         <h1><center><a target="blank" href="{{$project->link}}">{{$project->name}}</a></center></h1>
+        <p>{{$project->info}}</p>
 			@if(\Auth::check())
 			<center><a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn">Edit</button></a></center>
 			@endif

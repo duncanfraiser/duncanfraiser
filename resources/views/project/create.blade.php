@@ -17,7 +17,9 @@
       <div class="form-group">
         {{Form::text('link', null, ['class' => 'form-control', 'placeholder' => "Link To Project"])}}
       </div>
-
+      <div class="form-group">
+        {{Form::textarea('info', null, ['class' => 'form-control', 'placeholder' => "Application Info"])}}
+      </div>
 
       <div class="form-group">
         {{ Form::label('img', 'Upload Landing Page Image:',['style' => 'font-weight: normal'])}}

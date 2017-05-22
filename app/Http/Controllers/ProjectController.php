@@ -68,6 +68,7 @@ class ProjectController extends Controller
         $project=new Project;
         $project->name=$request->name;
         $project->link=$request->link;
+        $project->info=$request->info;
         $pic = request()->file('img');
         if($pic != null){
           $pic->storeAs('public/img', $pic->getClientOriginalName()); 
@@ -137,6 +138,7 @@ class ProjectController extends Controller
         $project=Project::findOrFail($id);
         $project->name=$request->name;
         $project->link=$request->link;
+        $project->info=$request->info;        
         $pic = request()->file('img');
         if($pic != null){
           $pic->storeAs('public/img', $pic->getClientOriginalName()); 
