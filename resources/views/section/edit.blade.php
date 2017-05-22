@@ -16,9 +16,9 @@
           {{Form::textarea('content', $section->content, ['class' => 'form-control', 'placeholder' => "Describe section content here..."])}}
         </div>
         <div class="form-group">
-          <center><img  style="width: 25%" src="{{url('/storage/img/'.$section->img)}}"></center><br/>
-          {{ Form::label('img', 'Current Image: '. $section->img,['class' => 'flex-center','style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
-          {{ Form::label('img', 'Choose Replacement Image',['class' => 'flex-center', 'style' => 'font-weight: normal', 'type' => 'file'])}}
+          <img  style="width: 25%" src="{{url('/storage/img/'.$section->img)}}"><br/>
+          {{ Form::label('img', 'Current Image: '. $section->img,['style' => 'font-weight: normal', 'type' => 'file'])}}<br/>
+          {{ Form::label('img', 'Choose Replacement Image',['style' => 'font-weight: normal', 'type' => 'file'])}}
           {{ Form::file('img')}}
         </div>
 
