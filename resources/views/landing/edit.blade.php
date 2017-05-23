@@ -91,7 +91,7 @@
         </div>
 
         <div class="col-md-12 form-group" style="margin: 1.5em; ">
-          {{Form::submit('Submit', ['class' => 'btn'])}}
+          {{Form::submit('Update', ['class' => 'btn'])}}
         </div>
       </div>
     </div> 
