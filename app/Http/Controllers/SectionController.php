@@ -22,9 +22,12 @@ class SectionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $projectId=$request->projectId;
+        // dd($projectId);
+        
+        return view('section.create', compact('projectId'));
     }
 
     /**
@@ -35,7 +38,16 @@ class SectionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $section=new Section;
+        $section->project_id=$request->projectId;
+
+        $section->title=$request->title;
+
+        $section->content=$request->content;
+
+        $section->save();
+        return redirect('project/'.$section->project_id);
+        
     }
 
     /**

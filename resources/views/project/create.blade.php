@@ -8,8 +8,7 @@
   <div class="col-md-8 col-md-offset-2 project">
     <h2>Add A Project</h2>
     {{Form::open(['action' => 'ProjectController@store', 'files' => true])}}
-
-
+ 
       <div class="form-group">
         {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => "Project Title"])}}
       </div>

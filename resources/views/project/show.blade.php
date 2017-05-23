@@ -13,7 +13,15 @@
         <h1><center><a target="blank" href="{{$project->link}}">{{$project->name}}</a></center></h1>
         <p>{{$project->info}}</p>
 			@if(\Auth::check())
-			<center><a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+      <center><a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+
+
+      {{Form::open(['method' => 'get', 'action' => ['SectionController@create']])}}
+        {{ Form::hidden('projectId', $project->id) }}
+        {{Form::submit('Submit', ['class' => 'btn'])}}
+      {{Form::close()}}
+
+
 			@endif
       </div>
     </div>

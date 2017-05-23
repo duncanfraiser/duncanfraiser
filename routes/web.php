@@ -21,7 +21,14 @@ Route::resource('/resume', 'ResumeController');
 Route::resource('/contact', 'ContactController');
 Route::get('/contact/{id}/thanks', 'ContactController@thanks');
 Route::resource('/test', 'TestController');
+
+
+
+
+// Route::get('/section/{id}/create', 'SectionController@create');
 Route::resource('/section', 'SectionController');
+
+
 Route::resource('/work', 'WorkController');
 
 
