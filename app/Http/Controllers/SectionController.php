@@ -40,10 +40,15 @@ class SectionController extends Controller
     {
         $section=new Section;
         $section->project_id=$request->projectId;
-
         $section->title=$request->title;
-
         $section->content=$request->content;
+        $pic = request()->file('img');
+        if($pic != null){
+          $pic->storeAs('public/img', $pic->getClientOriginalName()); 
+          $section->img = $pic->getClientOriginalName();
+        }
+
+
 
         $section->save();
         return redirect('project/'.$section->project_id);
