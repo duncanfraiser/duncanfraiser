@@ -73,7 +73,18 @@ class SectionController extends Controller
         $section=Section::findOrFail($id);
         $section->title=$request->title;
         $section->content=$request->content;
+        $pic = request()->file('img');
+        if($pic != null){
+            $pic->storeAs('public/img', $pic->getClientOriginalName()); 
+            $section->img = $pic->getClientOriginalName();
+        }
         $section->save();
+
+
+
+
+
+
         return redirect('/project/'.$section->project_id);
 
     }
