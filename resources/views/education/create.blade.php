@@ -2,43 +2,21 @@
 @section('content')
 @include('_includes.colorDesk')
   <div class="col-md-6 col-md-offset-3">
-    <h2>Add A Job</h2>
-    {{Form::open(['action' => 'ResumeController@store'])}}
+    <h2>Add A School</h2>
+    {{Form::open(['action' => 'EducationController@store'])}}
       <div class="form-group">
-        {{Form::text('company', null, ['class' => 'form-control', 'placeholder' => "Company Name & Location"])}}
+        {{Form::text('school', null, ['class' => 'form-control', 'placeholder' => "School Name"])}}
       </div>
       <div class="form-group">
-        {{Form::text('title', null, ['class' => 'form-control', 'placeholder' => "Job Title"])}}
+        {{Form::radio('kind', 'Degree')}} {{Form::label('king', 'Degree',['style'=>'form-control'])}}<br/>
+        {{Form::radio('kind', 'Certificate')}} {{Form::label('king', 'Certificate')}}
       </div>
-      <div class="form-group form-inline">
-        {{Form::label('startDate','Start Date')}}
-        {{Form::date('startDate', null, ['class' => 'form-control', 'placeholder' => "Company Name"])}}&nbsp;&nbsp;
-        {{Form::label('endDate','End Date')}}
-        {{Form::date('endDate', null, ['class' => 'form-control', 'placeholder' => "Company Name"])}}
-      </div>
-
-
-
       <div class="form-group">
-        {{Form::text('content[]', null, ['class' => 'form-control', 'placeholder' => "Bullet Point"])}}
+        {{Form::text('degrees[]', null, ['class' => 'form-control', 'placeholder' => "Degree or Certificate Earned"])}}
       </div>
       <div class="form-group input_fields_wrap">
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
       <div class="form-group">
         {{Form::submit('Submit', ['class' => 'btn', 'style' => 'float: right'])}}
         <a href="{{URL::previous()}}" class="btn" style="float:right">Cancel</a>
@@ -58,12 +36,11 @@ $(document).ready(function() {
         e.preventDefault();
           $(wrapper).append(
               `<div class="form-group">
-        		{{Form::text('content[]', null, ['class' => 'form-control','style' => 'margin-bottom:15px', 'placeholder' => "Bullet"])}}        		
+        		{{Form::text('degrees[]', null, ['class' => 'form-control','style' => 'margin-bottom:15px', 'placeholder' => "Degree"])}}        		
         		<a href="#" class="remove_field"><i class="fa fa-minus-circle fa-2x minus" style="margin-bottom: 15px" aria-hidden="true"></i></a>
               </div>`
             ); //add input box
-       // }
-    });
+       });
     $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })

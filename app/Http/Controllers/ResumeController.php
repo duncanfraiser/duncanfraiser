@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Job;
 use App\Bullet;
+use App\Education;
+use App\Tool;
+use App\Community;
 
 class ResumeController extends Controller
 {
@@ -14,7 +17,11 @@ class ResumeController extends Controller
      */
     public function index()
     {
-        return view('resume.index');
+        $jobs=Job::get();
+        $educations=Education::get();
+        $tools=Tool::orderBy('name')->get();
+        $communities=Community::get();
+        return view('resume.index', compact('jobs', 'educations', 'tools', 'communities'));
     }
 
     /**
@@ -24,7 +31,7 @@ class ResumeController extends Controller
      */
     public function create()
     {
-        return view('resume.create');
+        return view('tool.create');
     }
 
     /**
@@ -35,18 +42,6 @@ class ResumeController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
-        $job=new Job;
-        $job->company=$request->company;
-        $job->title=$request->title;
-        $job->startDate=$request->startDate;
-        $job->endDate=$request->endDate;
-        $job->save();
-
-        $bullet=new Bullet;
-        $bullet->job_id=$job->id;
-        $bullet->content=$request->content;
-        $bullet->save();
 
     }
 

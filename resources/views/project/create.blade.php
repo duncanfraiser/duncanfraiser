@@ -50,9 +50,10 @@
 
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
       </div>
-      <div class="col-md-12 form-group" style="margin: 1.5em; padding-right: 0;">
-        {{Form::submit('Submit', ['class' => 'btn'])}}
-      </div>
+        <div class="form-group">
+          <a href="{{url('/')}}"><button class="btn" style="float:right">Cancel</button></a>
+          {{Form::submit('Update', ['class' => 'btn', 'style' => 'float:right'])}}
+        </div>
     {{Form::close()}}
   </div>
 

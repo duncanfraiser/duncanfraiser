@@ -17,26 +17,22 @@
 
 Route::get('/', 'LandingController@index');
 Route::resource('/landing', 'LandingController');
-Route::resource('/resume', 'ResumeController');
+
 Route::resource('/contact', 'ContactController');
 Route::get('/contact/{id}/thanks', 'ContactController@thanks');
 Route::resource('/test', 'TestController');
 
 
 
-
-// Route::get('/section/{id}/create', 'SectionController@create');
+Route::resource('/project', 'ProjectController');
 Route::resource('/section', 'SectionController');
 
+Route::resource('/resume', 'ResumeController');
+Route::resource('/job', 'JobController');
+Route::resource('/education', 'EducationController');
+Route::resource('/tool', 'ToolController');
+Route::resource('/community', 'CommunityController');
 
-Route::resource('/work', 'WorkController');
-
-
-Route::get('/project/kennykens', 'ProjectController@kennykens');
-Route::get('/project/learningcenter', 'ProjectController@learningcenter');
-Route::get('/project/stpaul', 'ProjectController@stpaul');
-Route::get('/project/ergon', 'ProjectController@ergon');
-Route::resource('/project', 'ProjectController');
 
 Auth::routes();
 

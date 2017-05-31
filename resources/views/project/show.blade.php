@@ -15,14 +15,13 @@
 			@if(\Auth::check())
 
 
-<div class="form-group">
+  <div class="form-group">
     <a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn" style="float:right">Edit Project</button></a>
-      {{Form::open(['method' => 'get', 'action' => ['SectionController@create']])}}
-        {{ Form::hidden('projectId', $project->id) }}
-
-        {{Form::submit('Add Section', ['class' => 'btn', 'style' => 'float:right'])}}
-      {{Form::close()}}
-</div>
+    {{Form::open(['method' => 'get', 'action' => ['SectionController@create']])}}
+      {{ Form::hidden('projectId', $project->id) }}
+      {{Form::submit('Add Section', ['class' => 'btn', 'style' => 'float:right'])}}
+    {{Form::close()}}
+  </div>
 
 			@endif
       </div>

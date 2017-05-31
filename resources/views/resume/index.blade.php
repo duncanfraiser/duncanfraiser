@@ -8,96 +8,128 @@
   <div class="col-md-12" style="background-color: #000; margin-bottom: 2em; min-height: 485px">
     <div class="col-md-8 col-md-offset-2">
       <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">My Resume</h1></center>
-
-      <h2 class="catigory os-animation animated fadeInDown" data-os-animation-delay="0.1s">Experience</h2>
+      {{-- EXPERIENCE SECTION--}}
+      <h2 class="catigory os-animation animated fadeInDown" data-os-animation-delay="0.1s">Experience
+        @if(\Auth::check())
+        <a href="{{url('/job/create')}}" class="btn" style="float:right;padding: 2px">Add Job</a>
+        @endif
+        </h2>
       <div style="background-color: #fff; height: 1px;"></div>
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Ergon, Inc. ( Jackson, MS )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Lead Web Developer <span class="date">8/2015 to Current</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Write object oriented, efficient code using best software development practices.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Network Server setup using Ubuntu Linux operating system and virtual host configuration.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.3s">Design relational database management systems</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.4s">Create site frontend and backend user interface by using HTML/CSS along with PHP and Laravel framework.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.5s">Gather and refine specifications and requirements based on technical needs.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.6s">Create and maintain software documentation.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.7s">Responsible for creating, maintaining, expanding, and scaling sites</li>
-      </ul>
-
-
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">University of Mississippi, Medicinal Plant Garden ( Oxford, MS )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Work Study Student <span class="date"> 3/2013 to 8/2015</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Monitored and maintain water levels of various crops grown for the Pharmaceutical Department.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Managed 4 greenhouses and maintained water levels for exotic plants.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.3s">Responsible for planting and harvesting medical crops used for pharmaceutical research.</li>
-      </ul>
-
+        @foreach($jobs as $key => $job)
+          <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">{{$job->company}}
+          @if(\Auth::check())
+            <a href="{{url('/job/'.$job->id.'/edit')}}" class="btn" style="float:right;padding: 2px">Edit Job</a>
+          @endif
+          </h3>
+          <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">{{$job->title}}<span class="date">{{date('Y', strtotime($job->startDate))}} to 
+            @if($job->endDate != NULL)
+              {{date('Y', strtotime($job->endDate))}}</span></h5>
+            @else
+            Present
+            @endif    
+          </span></h5>
+          <ul> 
+            @foreach($job->bullets as $key => $bullet)
+              <li class="jd os-animation animated fadeInRight" data-os-animation-delay={{$bullet->delay}}>{{$bullet->content}}</li>
+            @endforeach
+          </ul>
+        @endforeach
+        {{-- EDUCATION SECTION --}}
+        <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Education
+        @if(\Auth::check())
+          <a href="{{url('/education/create')}}" class="btn" style="float:right;padding: 2px">Add School</a>
+        @endif
+        </h2>
+        <div style="background-color: #fff; height: 1px;"></div>
+          @foreach($educations as $education)
+            <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">{{$education->school}}
+              @if(\Auth::check())
+                <a href="{{url('/education/'.$education->id.'/edit')}}" class="btn" style="float:right;padding: 2px">Edit School</a>
+              @endif
+            </h3>
+            <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">{{$education->kind}}:</h5>
+            <ul>
+              @foreach($education->degrees as $degree)
+                <li class="jd os-animation animated fadeInRight" data-os-animation-delay="{{$degree->delay}}">{{$degree->content}}</li>
+              @endforeach
+            </ul>
+          @endforeach
  
+          {{-- SKILLS SECTION --}}
+           <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Skills
+        @if(\Auth::check())
+          <a href="{{url('/tool/create')}}" class="btn" style="float:right;padding: 2px">Add Skill</a>
+        @endif
+        </h2>
+        <div style="background-color: #fff; height: 1px;"></div>
+
+
+              <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Development Tools
+          @if(\Auth::check())
+            <a href="{{url('/tool/1/edit')}}" class="btn" style="float:right;padding: 2px">Edit Skills</a>
+          @endif
+          </h3>
+   
+      <div class="col-md-6" style="padding: 0">
+        <ul>
+          @foreach($tools as $key=>$tool)
+            @if($key % 2 == 0) {{-- checks for even index --}}
+              <li class="jd os-animation animated fadeInLeft" data-os-animation-delay={{$tool->delay}}>{{$tool->name}}</li>
+            @endif  
+          @endforeach
+        </ul>
+      </div>
+      <div class="col-md-6" style="padding: 0">
+        <ul>
+          @foreach($tools as $key=>$tool)
+            @if($key %2==1) {{-- checks for odd index --}}
+              <li class="jd os-animation animated fadeInRight" data-os-animation-delay={{$tool->delay}}>{{$tool->name}}</li>
+            @endif
+          @endforeach    
+        </ul>
+      </div>
+
+
+      {{-- COMMUNITY SERVICE --}}
+      <div class="col-md-12" style="padding: 0">
+        <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Community Service
+        @if(\Auth::check())
+          <a href="{{url('/community/create')}}" class="btn" style="float:right;padding: 2px">Add Service</a>
+        @endif
+        </h2>
+        <div style="background-color: #fff; height: 1px;"></div>
+
+        @foreach($communities as $key => $community)
+          <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">{{$community->title}}
+          @if(\Auth::check())
+            <a href="{{url('/community/'.$community->id.'/edit')}}" class="btn" style="float:right;padding: 2px">Edit Service</a>
+          @endif
+          </h3>
+          <ul>
+           <li class="jd os-animation animated fadeInLeft" data-os-animation-delay=0.3s>{!!$community->content!!}</li>
+          </ul> 
+        @endforeach
 
 
 
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">United Medical Systems ( Westborough, MA )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Laser Specialist <span class="date"> 1/2011 to 3/2013</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Assembled and operated an Evolve Laser during operating room prostate and ablation procedures. </li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Maintained and updated an Evolve Laser and Fiber Optic Tips.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.3s">Collaborated with the scheduling for long distance travel with equipment to perform BPH cases.</li>
-      </ul>
 
 
 
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">AR Decker & Associates ( Troy, MI )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Civil Engineering Designer <span class="date"> 12/2008 to 1/2011</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Drafted and designed engineering layouts for customers and or city requirements and deliverables.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Maintained drafts of water main lines, sanitary and storm sewers and parking lots.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.3s">Legal descriptions of property lines and easements.</li>
-      </ul>
+      </div>
 
 
 
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Modern Engineering, Inc. ( Rochester, MI )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">CAD Detailer <span class="date"> ?/200? to ?/200?</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Primarily worked with the checking and gauging systems group.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Evaluated and designed system layouts, product math data sheets, fixture designs and detailing requiring AutoCAD.</li>
-      </ul>
 
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Viking, Inc. ( Greenwood, MS )</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Co-op Engineering Student <span class="date"> ?/200? to ?/200?</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">I generated computer aided design, pro-engineering AutoCAD and miscellaneous CAD projects.</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Constructed and tested research & design projects of miscellaneous Viking products for both home and commercial usage.</li>
-      </ul>
 
-      <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Education</h2>
-      <div style="background-color: #fff; height: 1px;"></div>
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">The University of Mississippi</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Degree: <span class="date"> Graduated 2015</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Bachelor of Business Administration BBA</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Major: Management Information Systems</li>
-      </ul>
-
-      <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Macomb Emergency Services Training Center</h3>
-      <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">Certifacts:<span class="date"> Graduated 2009</span></h5>
-      <ul>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.1s">Firefighter</li>
-        <li class="jd os-animation animated fadeInRight" data-os-animation-delay="0.2s">Emergency Medical Technician</li>
-      </ul>
     </div>
-    
-  	 
+  </div>
 
+    {{-- black and white desk img spacer --}}
+    @include('_includes.bwDesk')
 
 
 
 
   </div>
-  <div class="col-md-12" style="padding: 0">
-    <div class="mydeskBW" >
-    </div>
-  </div>
-
 </div>
 @endsection

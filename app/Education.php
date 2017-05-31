@@ -5,17 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Bullet extends Model
+class Education extends Model
 {
       use SoftDeletes;
       protected $fillable = [
-   			'job_id',
-   			'content',
-   			'delay'
+   			'school',
+   			'kind',
+   			
         ];
 
 
-        public function job(){
-         return $this->belongsTo('App\Job');
-         }
+      public function degrees(){
+        return $this->hasMany('App\Degree');
+      }
 }

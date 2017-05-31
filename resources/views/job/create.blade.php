@@ -3,7 +3,7 @@
 @include('_includes.colorDesk')
   <div class="col-md-6 col-md-offset-3">
     <h2>Add A Job</h2>
-    {{Form::open(['action' => 'ResumeController@store'])}}
+    {{Form::open(['action' => 'JobController@store'])}}
       <div class="form-group">
         {{Form::text('company', null, ['class' => 'form-control', 'placeholder' => "Company Name & Location"])}}
       </div>
@@ -12,9 +12,9 @@
       </div>
       <div class="form-group form-inline">
         {{Form::label('startDate','Start Date')}}
-        {{Form::date('startDate', null, ['class' => 'form-control', 'placeholder' => "Company Name"])}}&nbsp;&nbsp;
+        {{Form::date('startDate', null, ['class' => 'form-control'])}}&nbsp;&nbsp;
         {{Form::label('endDate','End Date')}}
-        {{Form::date('endDate', null, ['class' => 'form-control', 'placeholder' => "Company Name"])}}
+        {{Form::date('endDate', null, ['class' => 'form-control'])}}
       </div>
 
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
         e.preventDefault();
           $(wrapper).append(
               `<div class="form-group">
-        		{{Form::text('content[]', null, ['class' => 'form-control','style' => 'margin-bottom:15px', 'placeholder' => "Bullet"])}}        		
+        		{{Form::text('content[]', null, ['class' => 'form-control','style' => 'margin-bottom:15px', 'placeholder' => "Bullet Point"])}}        		
         		<a href="#" class="remove_field"><i class="fa fa-minus-circle fa-2x minus" style="margin-bottom: 15px" aria-hidden="true"></i></a>
               </div>`
             ); //add input box

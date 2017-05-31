@@ -89,13 +89,12 @@
             <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"> <span style="font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">Add Development Tool</span></i>
           </div>
         </div>
-
-        <div class="col-md-12 form-group" style="margin: 1.5em; ">
-          {{Form::submit('Update', ['class' => 'btn'])}}
+        <div class="form-group">
+          <a href="{{URL::previous()}}"><button class="btn" style="float:right">Cancel</button></a>
+          {{Form::submit('Update', ['class' => 'btn', 'style' => 'float:right'])}}
         </div>
       </div>
-    </div> 
-    {{Form::close()}}
+     {{Form::close()}}
    </div> 
 
     {{-- black and white desk img spacer --}}

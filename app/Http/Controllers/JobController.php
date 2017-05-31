@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Job;
+use App\Bullet;
+
 
 class JobController extends Controller
 {
@@ -23,7 +25,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        //
+        return view('job.create');
     }
 
     /**
@@ -34,7 +36,27 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        $job=new Job;
+        $job->company=$request->company;
+        $job->title=$request->title;
+        $job->startDate=$request->startDate;
+        $job->endDate=$request->endDate;
+        $job->save();
+
+
+        $bullets=$request->content;
+        if($bullets[0] != null ){
+          foreach ($bullets as $key => $bull) {
+            $bullet=new Bullet;
+            $bullet->job_id=$job->id;
+            $bullet->content=$bullets[$key];
+            $bullet->delay='0.'.$key.'s';
+            $bullet->save();
+          }
+        }
+
+        return redirect('/resume');
     }
 
     /**
@@ -56,7 +78,8 @@ class JobController extends Controller
      */
     public function edit($id)
     {
-        //
+        $job=Job::findOrFail($id);
+        return view('job.edit', compact('job'));
     }
 
     /**
@@ -68,7 +91,46 @@ class JobController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+ 
+
+
+        $job=Job::findOrFail($id);
+        $job->company=$request->company;
+        $job->title=$request->title;
+        $job->startDate=$request->startDate;
+        $job->endDate=$request->endDate;
+        $job->save();
+        $bullets=$request->content;
+        if($bullets[0] != null ){
+          foreach ($job->bullets as $key => $bull) {
+            $bullet=Bullet::findOrFail($bull->id);
+            $bullet->job_id=$job->id;
+            $bullet->content=$bullets[$key];
+            $bullet->delay='0.'.$key.'s';
+            $bullet->save();
+          }
+        }
+
+        $newBulls=$request->newContent;
+        if($newBulls[0] != null){
+          $bullTotal=Bullet::where('job_id', $id)->count();
+          foreach ($request->newContent as $key => $bull) {
+            $bull=new Bullet;
+            $bull->job_id=$job->id;
+            $bull->content=($newBulls[$key]);
+            $bull->delay='0.'.($key+$bullTotal).'s';
+            $bull->save();
+            }
+        }
+
+        if($request->dels != null){
+          foreach($request->dels as $del){
+            $bull=Bullet::findOrFail($del);
+            $bull->delete();            
+          }
+        }  
+        return redirect('/resume');
     }
 
     /**
@@ -79,6 +141,8 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $job = Job::findOrFail($id);
+        $job->delete();
+        return redirect('/resume');
     }
 }

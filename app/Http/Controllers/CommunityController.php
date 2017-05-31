@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Work;
+use App\Community;
 
-
-
-class WorkController extends Controller
+class CommunityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +24,8 @@ class WorkController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('community.create');
     }
 
     /**
@@ -37,7 +36,11 @@ class WorkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $community= new Community;
+        $community->title=$request->title;
+        $community->content=$request->content;
+        $community->save();
+        return redirect('/resume');
     }
 
     /**
@@ -48,10 +51,7 @@ class WorkController extends Controller
      */
     public function show($id)
     {
-        $work=Work::FindOrFail($id);
-        // dd($work);
-
-        return view('work.show', compact('work'));
+        //
     }
 
     /**
@@ -62,7 +62,8 @@ class WorkController extends Controller
      */
     public function edit($id)
     {
-        //
+        $community=Community::findOrFail($id);
+        return view('community.edit', compact('community'));
     }
 
     /**
@@ -74,7 +75,11 @@ class WorkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $community= Community::findOrFail($id);
+        $community->title=$request->title;
+        $community->content=$request->content;
+        $community->save();
+        return redirect('/resume');
     }
 
     /**
