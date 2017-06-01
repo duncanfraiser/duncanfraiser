@@ -1,7 +1,7 @@
 @extends('_layout.template')
 @section('content')
 @include('_includes.colorDesk')
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3" style="margin-bottom:50px">
     <h2>Add A Job</h2>
     {{Form::open(['action' => 'JobController@store'])}}
       <div class="form-group">
@@ -40,8 +40,8 @@
 
 
       <div class="form-group">
-        {{Form::submit('Submit', ['class' => 'btn', 'style' => 'float: right'])}}
-        <a href="{{URL::previous()}}" class="btn" style="float:right">Cancel</a>
+        {{Form::submit('Submit', ['class' => 'btn blueBtn', 'style' => 'float: right'])}}
+        <a href="{{URL::previous()}}" class="btn whiteBtn" style="float:right">Cancel</a>
       </div>
     {{Form::close()}}
   </div>

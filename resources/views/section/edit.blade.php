@@ -1,14 +1,11 @@
 @extends('_layout.template')
 @section('content')
-  <div class="container-fluid" style="padding: 0">
-    {{-- color desk img spacer --}}  
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskColor">
-      </div>
-    </div>
-
+ {{-- color desk img spacer --}}  
+@include('_includes.colorDesk')
+  <div class="col-md-8 col-md-offset-2" style="margin-bottom: 50px">
+    <h2>Edit Section</h2>
 	{{Form::model($section, ['method' => 'PATCH', 'files' => true, 'action' => ['SectionController@update', $section->id]])}}
-      <div class="col-md-8 col-md-offset-2"">
+      
         <div class="form-group" style="margin-top: 2em">
           {{Form::text('title', $section->title, ['class' => 'form-control', 'placeholder' => "Section Title"])}}
  	    </div>
@@ -25,7 +22,9 @@
 
 
         <div class="form-group">
-          {{Form::submit('Update', ['class' => 'btn', 'style' => 'float:right'])}}
+
+          {{Form::submit('Update', ['class' => 'btn blueBtn', 'style' => 'float:right'])}}
+                  <a href="{{URL::previous()}}" class="btn whiteBtn" style="float:right">Cancel</a>
         </div>
 
     {{Form::close()}}
@@ -34,15 +33,11 @@
 
             <div class="form-group">
           {{Form::open(['method' => 'DELETE', 'route' => ['section.destroy', $section->id], 'class' => 'delete'])}}
-          {{Form::submit('Delete', ['class' => 'btn', 'style' => 'float:right'])}}
+          {{Form::submit('Delete', ['class' => 'btn redBtn', 'style' => 'float:right'])}}
           {{Form::close()}}
     	</div>
-     </div>
-    {{-- black and white desk img spacer --}}
-    <div class="col-md-12" style="padding: 0">
-      <div class="mydeskBW" >
-      </div>
-    </div>
+ 
 
-  </div>
+</div>
+@include('_includes.bwDesk')
 @endsection

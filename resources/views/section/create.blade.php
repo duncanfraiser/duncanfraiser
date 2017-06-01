@@ -21,7 +21,8 @@
           {{ Form::file('img')}}
         </div>
         <div class="form-group">
-          {{Form::submit('Add Section', ['class' => 'btn', 'style' => 'float:right'])}}
+          {{Form::submit('Add Section', ['class' => 'btn blueBtn', 'style' => 'float:right'])}}
+          <a href="{{URL::previous()}}" class="btn whiteBtn" style="float:right">Cancel</a>
         </div>
       {{Form::close()}}
     </div>

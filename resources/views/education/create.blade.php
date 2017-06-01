@@ -1,11 +1,16 @@
 @extends('_layout.template')
 @section('content')
 @include('_includes.colorDesk')
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3" style="margin-bottom: 50px">
     <h2>Add A School</h2>
     {{Form::open(['action' => 'EducationController@store'])}}
       <div class="form-group">
-        {{Form::text('school', null, ['class' => 'form-control', 'placeholder' => "School Name"])}}
+         @if($errors->has('school')) 
+          {{Form::label('school', "Please Enter School Name", ['class' => 'errs'])}}<br/>
+          {{Form::text('school', null, ['class' => 'redform-control', 'placeholder' => "School Name"])}} 
+        @else
+          {{Form::text('school', null, ['class' => 'form-control', 'placeholder' => "School Name"])}}
+        @endif
       </div>
       <div class="form-group">
         {{Form::radio('kind', 'Degree')}} {{Form::label('king', 'Degree',['style'=>'form-control'])}}<br/>
@@ -18,8 +23,8 @@
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
       </div>
       <div class="form-group">
-        {{Form::submit('Submit', ['class' => 'btn', 'style' => 'float: right'])}}
-        <a href="{{URL::previous()}}" class="btn" style="float:right">Cancel</a>
+        {{Form::submit('Submit', ['class' => 'btn blueBtn', 'style' => 'float: right'])}}
+        <a href="{{URL::previous()}}" class="btn whiteBtn" style="float:right">Cancel</a>
       </div>
     {{Form::close()}}
   </div>

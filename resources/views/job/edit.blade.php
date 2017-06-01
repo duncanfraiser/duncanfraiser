@@ -29,13 +29,13 @@
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"></i>
       </div>
       <div class="form-group">
-        {{Form::submit('Update', ['class' => 'btn', 'style' => 'float: right'])}}
-        <a href="{{URL::previous()}}" class="btn" style="float:right">Cancel</a>
+        {{Form::submit('Update', ['class' => 'btn blueBtn', 'style' => 'float: right'])}}
+        <a href="{{URL::previous()}}" class="btn whiteBtn" style="float:right">Cancel</a>
       </div>
     {{Form::close()}}
     {{Form::open(['method' => 'DELETE', 'route' => ['job.destroy', $job->id]])}}
-      {{Form::submit('Delete Job', ['class' => 'btn', 'style'=>'float:right'])}}
-      {{Form::close()}}
+      {{Form::submit('Delete', ['class' => 'btn redBtn', 'style'=>'float:right'])}}
+    {{Form::close()}}
   </div>
 @include('_includes.bwDesk')
 @endsection

@@ -25,8 +25,10 @@
 
 
         <div class="form-group">
-          <a href="{{URL::previous()}}"><button class="btn">Cancel</button></a>
-          {{Form::submit('Update', ['class' => 'btn'])}}
+        <center>
+          <a href="{{URL::previous()}}"><button class="btn whiteBtn">Cancel</button></a>
+          {{Form::submit('Update', ['class' => 'btn blueBtn'])}}
+          </center>
         </div>
 
 

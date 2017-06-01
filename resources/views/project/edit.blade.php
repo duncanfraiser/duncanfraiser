@@ -111,8 +111,8 @@
         <i class="fa fa-plus-circle fa-2x add_field_button plus" aria-hidden="true"> <span style="font-size: 16px; font-family: 'Raleway', sans-serif; font-weight: bold;">Add Additional Section</span></i><br/>
       </div>
         <div class="form-group">
-          <a href="{{URL::previous()}}"><button class="btn" style="float:right">Cancel</button></a>
-          {{Form::submit('Update', ['class' => 'btn', 'style' => 'float:right'])}}
+          {{Form::submit('Update', ['class' => 'btn blueBtn', 'style' => 'float:right'])}}
+          <a href="{{URL::previous()}}"><button class="btn whiteBtn" style="float:right">Cancel</button></a>
         </div>
     {{Form::close()}}
     </div>

@@ -20,7 +20,7 @@
 	          {{Form::label('email', "Please Enter Email Address", ['class' => 'errs'])}}<br/>
 	          {{Form::email('email', null, ['class' => 'redform-control', 'placeholder' => "Email Address"])}} 
 	        @else
-	          {{Form::email('email', null, ['class' => 'form-control', 'placeholder' => "Email Addresscdc"])}} 
+	          {{Form::email('email', null, ['class' => 'form-control', 'placeholder' => "Email Address"])}} 
 	        @endif
   		  </div>
 		  <div class="form-group">
@@ -40,9 +40,10 @@
 	        @endif
 		  </div>
       	  <div class="form-group">
-            {{Form::submit('Send', ['class' => 'btn', 'style' => 'float:right'])}}
+            {{Form::submit('Send', ['class' => 'btn blueBtn', 'style' => 'float:right'])}}
           </div>
       {{Form::close()}}
+        <a href="{{URL::previous()}}"><button class="btn whiteBtn" style="float:right">Cancel</button></a>
       </div>
     
   </div>

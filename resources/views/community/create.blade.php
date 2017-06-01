@@ -12,8 +12,8 @@
 
 
       <div class="form-group">
-        {{Form::submit('Submit', ['class' => 'btn', 'style' => 'float: right'])}}
-        <a href="{{URL::previous()}}" class="btn" style="float:right">Cancel</a>
+        {{Form::submit('Submit', ['class' => 'btn blueBtn', 'style' => 'float: right'])}}
+        <a href="{{URL::previous()}}" class="btn whiteBtn" style="float:right">Cancel</a>
       </div>      
 
     {{Form::close()}}

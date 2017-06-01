@@ -36,6 +36,13 @@ class EducationController extends Controller
      */
     public function store(Request $request)
     {
+        // $this->validate($request,[
+        //     'school' => 'required',
+        //     'degree' => 'required',
+
+        // ]);
+
+
         $education=new Education;
         $education->school=$request->school;
         $education->kind=$request->kind;
@@ -136,6 +143,8 @@ class EducationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $education = Education::findOrFail($id);
+        $education->delete();
+        return redirect('/resume');
     }
 }

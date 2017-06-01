@@ -19,10 +19,10 @@
 
 
   <div class="form-group">
-    <a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn" style="float:right">Edit Project</button></a>
+    <a href="{{url('/project/'.$project->id.'/edit')}}"><button class="btn redBtn" style="float:right">Edit Project</button></a>
     {{Form::open(['method' => 'get', 'action' => ['SectionController@create']])}}
       {{ Form::hidden('projectId', $project->id) }}
-      {{Form::submit('Add Section', ['class' => 'btn', 'style' => 'float:right'])}}
+      {{Form::submit('Add Section', ['class' => 'btn blueBtn', 'style' => 'float:right'])}}
     {{Form::close()}}
   </div>
 
@@ -47,7 +47,7 @@
 	        <h2><center>{{$section->title}}</center></h2>
 	   		<p class="sectext">{!!$section->content!!}</p>
               @if(\Auth::check())
-				<center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+				<center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn redBtn">Edit</button></a></center>
 			  @endif
 	      </div>
 	      <div class="col-md-4">
@@ -72,7 +72,7 @@
     	    <h2><center>{{$section->title}}</center></h2>
     		<p class="sectext">{!!$section->content!!}</p>
     		@if(\Auth::check())
-			  <center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn">Edit</button></a></center>
+			  <center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn redBtn">Edit</button></a></center>
 			@endif
           </div>
         </div>

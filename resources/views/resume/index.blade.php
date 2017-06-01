@@ -19,14 +19,14 @@
       {{-- EXPERIENCE SECTION--}}
       <h2 class="catigory os-animation animated fadeInDown" data-os-animation-delay="0.1s">Experience
         @if(\Auth::check())
-        <a href="{{url('/job/create')}}" class="btn" style="float:right;padding: 2px">Add Job</a>
+        <a href="{{url('/job/create')}}" class="btn blueBtn" style="float:right;padding: 2px">Add Job</a>
         @endif
         </h2>
       <div style="background-color: #fff; height: 1px;"></div>
         @foreach($jobs as $key => $job)
           <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">{{$job->company}}
           @if(\Auth::check())
-            <a href="{{url('/job/'.$job->id.'/edit')}}" class="btn" style="float:right;padding: 2px">Edit Job</a>
+            <a href="{{url('/job/'.$job->id.'/edit')}}" class="btn redBtn" style="float:right;padding: 2px">Edit Job</a>
           @endif
           </h3>
           <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">{{$job->title}}<span class="date">{{date('Y', strtotime($job->startDate))}} to 
@@ -45,14 +45,14 @@
         {{-- EDUCATION SECTION --}}
         <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Education
         @if(\Auth::check())
-          <a href="{{url('/education/create')}}" class="btn" style="float:right;padding: 2px">Add School</a>
+          <a href="{{url('/education/create')}}" class="btn blueBtn" style="float:right;padding: 2px">Add School</a>
         @endif
         </h2>
         <div style="background-color: #fff; height: 1px;"></div>
           @foreach($educations as $education)
             <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">{{$education->school}}
               @if(\Auth::check())
-                <a href="{{url('/education/'.$education->id.'/edit')}}" class="btn" style="float:right;padding: 2px">Edit School</a>
+                <a href="{{url('/education/'.$education->id.'/edit')}}" class="btn redBtn" style="float:right;padding: 2px">Edit School</a>
               @endif
             </h3>
             <h5 class="job os-animation animated fadeInLeft" data-os-animation-delay="0.3s">{{$education->kind}}:</h5>
@@ -66,7 +66,7 @@
           {{-- SKILLS SECTION --}}
            <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Skills
         @if(\Auth::check())
-          <a href="{{url('/tool/create')}}" class="btn" style="float:right;padding: 2px">Add Skill</a>
+          <a href="{{url('/tool/create')}}" class="btn blueBtn" style="float:right;padding: 2px">Add Skill</a>
         @endif
         </h2>
         <div style="background-color: #fff; height: 1px;"></div>
@@ -74,7 +74,7 @@
 
               <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">Development Tools
           @if(\Auth::check())
-            <a href="{{url('/tool/1/edit')}}" class="btn" style="float:right;padding: 2px">Edit Skills</a>
+            <a href="{{url('/tool/1/edit')}}" class="btn redBtn" style="float:right;padding: 2px">Edit Skills</a>
           @endif
           </h3>
    
@@ -102,7 +102,7 @@
       <div class="col-md-12" style="padding: 0">
         <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Community Service
         @if(\Auth::check())
-          <a href="{{url('/community/create')}}" class="btn" style="float:right;padding: 2px">Add Service</a>
+          <a href="{{url('/community/create')}}" class="btn blueBtn" style="float:right;padding: 2px">Add Service</a>
         @endif
         </h2>
         <div style="background-color: #fff; height: 1px;"></div>
@@ -110,7 +110,7 @@
         @foreach($communities as $key => $community)
           <h3 class="company os-animation animated fadeInLeft" data-os-animation-delay="0.2s">{{$community->title}}
           @if(\Auth::check())
-            <a href="{{url('/community/'.$community->id.'/edit')}}" class="btn" style="float:right;padding: 2px">Edit Service</a>
+            <a href="{{url('/community/'.$community->id.'/edit')}}" class="btn redBtn" style="float:right;padding: 2px">Edit Service</a>
           @endif
           </h3>
           <ul>

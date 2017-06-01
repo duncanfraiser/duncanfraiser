@@ -90,8 +90,10 @@
           </div>
         </div>
         <div class="form-group">
-          <a href="{{URL::previous()}}"><button class="btn" style="float:right">Cancel</button></a>
-          {{Form::submit('Update', ['class' => 'btn', 'style' => 'float:right'])}}
+        <center>
+          <a href="{{URL::previous()}}"><button class="btn whiteBtn" >Cancel</button></a>
+          {{Form::submit('Update Home Page', ['class' => 'btn blueBtn'])}}
+        </center>
         </div>
       </div>
      {{Form::close()}}
