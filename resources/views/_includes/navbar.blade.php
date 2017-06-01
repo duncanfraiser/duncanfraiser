@@ -24,7 +24,8 @@
                   </a>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href="{{url('/landing/1/edit')}}">Edit Home Page</a></li>
-                      <li><a href="{{url('/project/create')}}">Add Project</a></li>
+                      
+                      {{-- <li><a href="{{url('/project/create')}}">Add Project</a></li> --}}
                       <li>
                         <a href="{{ url('/logout') }}"
                           onclick="event.preventDefault();
