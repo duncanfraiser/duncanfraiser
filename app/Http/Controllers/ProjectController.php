@@ -106,8 +106,12 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
+        $works=Project::where('id','!=', $id)->get();
         $project=Project::findOrFail($id);
-        return view('project.show', compact('project'));
+        $sectionCount=Section::where('project_id',$id)->count();
+        $delays=['.3s','.5s','.7s','.9s'];
+
+        return view('project.show', compact('project','works','sectionCount','delays'));
     }
 
     /**

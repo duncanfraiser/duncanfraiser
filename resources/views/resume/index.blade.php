@@ -1,13 +1,21 @@
 @extends('_layout.template')
 @section('content')
 <div class="container-fluid" style="padding: 0">
-  <div class="col-md-12" style="padding: 0">
-    <div class="mydeskColor">
-    </div>
-  </div>
+
+   @include('_includes.colorDesk')
+
+
   <div class="col-md-12" style="background-color: #000; margin-bottom: 2em; min-height: 485px">
     <div class="col-md-8 col-md-offset-2">
-      <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">My Resume</h1></center>
+      <center>
+         <h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s" style="margin-bottom: 5px">My Resume</h1>
+         <p>Download Resume<br/>
+         <a target='blank' href="{{url('/file/resumeDuncanFraiser.pdf')}}">.pdf</a>&nbsp;
+         <a href="{{url('/file/resumeDuncanFraiser.docx')}}">.docx</a></p>
+      </center>
+
+
+
       {{-- EXPERIENCE SECTION--}}
       <h2 class="catigory os-animation animated fadeInDown" data-os-animation-delay="0.1s">Experience
         @if(\Auth::check())
@@ -113,7 +121,7 @@
 
 
 
-
+<p class="catigory os-animation animated fadeInUp" style="float:right; margin-top:50px" data-os-animation-delay="0.1s"> References available upon request.</p>
 
       </div>
 
