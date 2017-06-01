@@ -202,55 +202,7 @@ class ProjectController extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    //     $sec=(count($request->sectionExistingTitles));
-    //     if($sec!= 0){
-    // //This block updates existing project sections objects
-    //     $ids=$request->sectionExistingIds;
-    //     $titles=$request->sectionExistingTitles;
-    //     $contents=$request->sectionExistingContents;   
-    //     foreach($ids as $key=>$id){
-    //         $section = Section::findOrFail($id);
-    //         $section->project_id=$project->id;
-    //         $section->title = $titles[$key];
-    //         $section->content = $contents[$key];
-
-    //     $pic = request()->file('img');
-    //     if($pic != null){
-    //     $pic->storeAs('public/img', $pic->getClientOriginalName()); 
-    //     $section->img = $pic->getClientOriginalName();
-    //     }
-
-
-    //         $section->save();  
-    //         }
-    //     }
-
-    //This block stores new project sections objects    
-        // $addSection=(count($request->sectionTitles));
-        // if($addSection!= 0){
-        //     $newTitles=$request->sectionTitles;
-        //     $newContents=$request->sectionContents;  
-        //     foreach($newTitles as $key=>$new){
-        //         $section = new Section;
-        //         $section->project_id=$project->id;
-        //         $section->title = $newTitles[$key];
-        //         $section->content = $newContents[$key];
-        //         $section->save();  
-        //         }
-        //     }
-
-        return redirect('/');
+        return redirect('/project/'.$project->id);
 
     }
 

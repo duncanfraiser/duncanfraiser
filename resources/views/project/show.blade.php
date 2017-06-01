@@ -11,7 +11,7 @@
     <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
       <div class="col-md-12">
         <h1><center><a target="blank" href="{{$project->link}}">{{$project->name}}</a></center></h1>
-        <p class="sectext">{{$project->info}}</p>
+        <p class="sectext">{!!$project->info!!}</p>
 		
 
 
