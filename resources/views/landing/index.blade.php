@@ -63,7 +63,7 @@
           <h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Development Tools</h1>
       </div>
       <div class="col-md-3 col-md-offset-3">
-        <ul style="font-size: 2em">
+        <ul style="font-size: 2em; margin-bottom: 0px">
           @foreach($landing->tools as $key=>$tool)
             @if($key % 2 == 0) {{-- checks for even index --}}
               <li class="os-animation"  data-os-animation={{$tool->direction}} data-os-animation-delay={{$tool->delay}}>{{$tool->name}}</li>
