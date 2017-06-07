@@ -22,10 +22,10 @@
           @foreach($contacts as $contact)
             @if($contact->newContact != 0)
               <li class="conli"><a href="{{url('/contact/'.$contact->id)}}"><span style="color:#66AFE9">NEW! </span> {{$contact->name}}</a>
-              <br/><i class="consub">~{{$contact->subject}}<span style="color:red"> ~ {{date('F d, Y', strtotime($contact->created_at))}}</span></i></li>
+              <br/><i class="consub">~{{$contact->subject}}<span style="color:red"> ~ {{$contact->created_at->toDayDateTimeString()}}</span></i></li>
             @else
               <li class="conli"><a href="{{url('/contact/'.$contact->id)}}">{{$contact->name}}</a>
-              <br/><i class="consub">~ {{$contact->subject}}<span style="color:red"> ~ {{date('F d, Y', strtotime($contact->created_at))}}</span></i></li>
+              <br/><i class="consub">~ {{$contact->subject}}<span style="color:red"> ~ {{$contact->created_at->toDayDateTimeString()}}</span></i></li>
             @endif
           @endforeach
         </ul>
