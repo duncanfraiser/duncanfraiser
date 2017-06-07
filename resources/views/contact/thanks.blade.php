@@ -10,12 +10,12 @@
   	 <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">Thanks {{$contact->name}}.</h1></center>
 
       <div class="os-animation " data-os-animation="fadeIn" data-os-animation-delay="0.3s">
-        <center><img src="{{'/img/beard.png'}}" class="image img-circle img-responsive flex-center" style="border: solid 2px #fff"></center>
+        <center><img src="{{'/img/beard1.png'}}" class="image img-circle img-responsive flex-center" style="border: solid 2px #fff"></center>
       </div>
 
   	 <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">I look forward to talking to you!</h1></center>
 
-
+<center><a href="{{url('/')}}"><button class="btn blueBtn">Home</button></a></center>
   </div>
   <div class="col-md-12" style="padding: 0">
     <div class="mydeskBW" >

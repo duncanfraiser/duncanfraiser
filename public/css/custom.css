@@ -14,6 +14,11 @@
             font-weight: bold;
         }
     }
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
 
 
 a{
@@ -40,6 +45,14 @@ i {
         font-family: 'Raleway', sans-serif;
 }
 
+
+
+/*CONSTANTS   CONSTANTS   CONSTANTS   CONSTANTS*/
+.noMargin{
+    margin-top:0;
+    margin-bottom:0;
+
+}
 
 /*BUTTONS BUTTONS BUTTONS BUTTONS  */
 
@@ -321,7 +334,51 @@ border-radius: 0px;
     }
 /*End Laravel Styles*/
 
+/*CONTACT PAGES CONTACT PAGES*/
+.conLable{
+    color:#66AFE9;
+    float: right;
 
+
+}
+
+.conTable{
+        margin: 20px 0px 80px 0px;
+}
+.conTable td, th {
+    border:none;
+    text-align: left;
+    padding: 0px 3px;
+
+}
+
+.comTable tr, h1, h2, h3, h4, h6{
+/*    padding:0px;
+    margin:0px;*/
+}
+
+.btnBottom{
+            position: fixed;
+        left: 0px;
+        bottom: 0px;
+}
+
+
+.conCreateImg{
+/*    border: solid 2px #fff;
+    float: right;*/
+    margin-top: 60px;
+}
+
+    @media (max-width: 767px) {
+        .conCreateImg{
+        margin-top: 20px;
+        }
+    }
+
+
+
+/*END CONTACT PAGES  END CONTACT PAGES*/
 
 /*df page load icon*/
     .loader {

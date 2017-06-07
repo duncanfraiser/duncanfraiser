@@ -7,10 +7,10 @@
 
 
 
-    <div class="col-md-4 col-md-offset-2">
-      <h1>Contact Messages</h1>
+    <div class="col-md-5 col-md-offset-2">
+      <h1 style="margin-bottom: 0px">Contact Inbox</h1>
         @if(App\Contact::newCons() != 0)
-          <h3 style="color:#66AFE9;">You have {{App\Contact::newCons()}} unread 
+          <h3 style="color:#66AFE9;margin-top: 0px">You have {{App\Contact::newCons()}} unread 
             @if(App\Contact::newCons() > 2)
               messages
             @else
@@ -21,11 +21,11 @@
         <ul>
           @foreach($contacts as $contact)
             @if($contact->newContact != 0)
-              <li class="conli"><a href="{{url('/contact/'.$contact->id)}}"><span style="color:#66AFE9">NEW </span> {{$contact->name}}</a>
-              <br/><i class="consub">~{{$contact->subject}}</i></li>
+              <li class="conli"><a href="{{url('/contact/'.$contact->id)}}"><span style="color:#66AFE9">NEW! </span> {{$contact->name}}</a>
+              <br/><i class="consub">~{{$contact->subject}}<span style="color:red"> ~ {{date('F d, Y', strtotime($contact->created_at))}}</span></i></li>
             @else
               <li class="conli"><a href="{{url('/contact/'.$contact->id)}}">{{$contact->name}}</a>
-              <br/><i class="consub">~{{$contact->subject}}</i></li>
+              <br/><i class="consub">~ {{$contact->subject}}<span style="color:red"> ~ {{date('F d, Y', strtotime($contact->created_at))}}</span></i></li>
             @endif
           @endforeach
         </ul>

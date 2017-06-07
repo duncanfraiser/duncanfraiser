@@ -2,10 +2,11 @@
 @section('content')
 <div class="container-fluid" style="padding: 0">
 @include('_includes.colorDesk')
-  <div class="col-md-12" style="background-color: #000; margin-bottom: 5em">
+  <div class="col-md-12" style="height: auto; overflow:auto;">
+	<div class="col-md-6 col-md-offset-2" style="padding-bottom: 50px">
   
       <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">Contact Me</h1></center>
-      <div class="col-md-6 col-md-offset-3">
+  
       {{Form::open(['action' => 'ContactController@store'])}}
           <div class="form-group">
    	        @if($errors->has('name'))	
@@ -44,8 +45,12 @@
           </div>
       {{Form::close()}}
         <a href="{{URL::previous()}}"><button class="btn whiteBtn" style="float:right">Cancel</button></a>
-      </div>
-    
+       </div>
+        <div class="col-md-3">
+          <div class="os-animation conCreateImg" data-os-animation="fadeIn" data-os-animation-delay="0.3s">
+            <img src="{{'/img/beard1.png'}}" class="image img-circle img-responsive conCreateImg" style="border: solid 2px #fff; float: right">
+          </div>
+        </div>
   </div>
 @include('_includes.bwDesk')
 </div>
