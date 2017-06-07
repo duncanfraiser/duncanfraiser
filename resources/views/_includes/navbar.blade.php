@@ -16,13 +16,18 @@
             <li><a href="{{url('/resume')}}">resume</a></li>
             <li><a href="{{url('/contact/create')}}">Contact</a></li>
             @if (Auth::guest())
+
             {{-- <li><a href="{{url('/login')}}">Login</a></li> --}}
             @else
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                     {{ Auth::user()->name }} <span class="caret"></span>
+                                        @if(App\Contact::newCons()!=0)
+                    <div class="lilNotsTop"><div class="lilNots">{{App\Contact::newCons()}}</div></div>
+                    @endif
                   </a>
                     <ul class="dropdown-menu" role="menu">
+                                          <li><a href="{{url('/contact')}}">Inbox</a></li>
                       <li><a href="{{url('/landing/1/edit')}}">Edit Home Page</a></li>
 
                       {{-- <li><a href="{{url('/project/create')}}">Add Project</a></li> --}}

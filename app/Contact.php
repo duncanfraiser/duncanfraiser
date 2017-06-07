@@ -13,6 +13,13 @@ class Contact extends Model
    			'name',
             'email',
             'subject',
-            'body'
+            'body',
+            'newContact'
     	    ];
+
+      public static function newCons(){
+      	$newCons=Contact::where('newContact','1')->count();;
+        return $newCons;
+      }
+
 }

@@ -41,7 +41,7 @@ i {
 }
 
 
-/*BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS BUTTONS */
+/*BUTTONS BUTTONS BUTTONS BUTTONS  */
 
 .redBtn {
     color:red;
@@ -93,10 +93,83 @@ i {
 }
 
 
-/*WORK PAGE WORK PAGE WORK PAGE WORK PAGE WORK PAGE WORK PAGE WORK PAGE WORK PAGE WORK PAGE WORK PAGE */
+/*NOTIFACTIONS    NOTIFACTIONS   */
+.lilNots {
+  height: 20px;
+  width: 20px;
+  display: table-cell;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  font-size: 10px;
+  vertical-align: middle;
+  border-radius: 50%; /* may require vendor prefixes */
+  background: #d90000;
+
+}
+
+ .lilNotsTop{
+   position:absolute;
+   top:2px;
+   right:0px;
+  }
+
+.bigNots {
+  height: 37px;
+  width: 37px;
+  display: table-cell;
+  text-align: center;
+  font-weight: 900;
+  vertical-align: middle;
+  border-radius: 50%; /* may require vendor prefixes */
+  background: red;
+
+}
+
+ .bigNotsTop{
+   position:absolute;
+   top:40px;
+   right:0px;
+  }
+
+/*WORK PAGE WORK PAGE WORK PAGE  */
 .sectext{
     font-size: 18px;
 }
+
+.consub{
+    margin-left: 20px;
+    font-size: 80%;
+}
+
+.conli{
+    margin-bottom: 10px
+}
+
+
+
+#talkbubble {
+   width: 100px;
+   height: 50px;
+   background: #d90000;
+   position: relative;
+   -moz-border-radius:    10px;
+   -webkit-border-radius: 10px;
+   border-radius:         10px;
+}
+#talkbubble:before {
+   content:"";
+   position: absolute;
+   right: 100%;
+   top: 30px;
+   width: 0;
+   height: 0;
+   border-top: 5px solid transparent;
+   border-right: 10px solid #d90000;
+   border-bottom: 5px solid transparent;
+}
+
+
 
 
 
@@ -379,7 +452,7 @@ border-radius: 0px;
 
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: red;
+    color: #66AFE9;
     background-color: #000;
     margin: 0px;
     border-bottom: 0px;

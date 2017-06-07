@@ -14,7 +14,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts=Contact::latest()->get();
+        
+        return view('contact.index', compact('contacts'));
     }
 
     /**
@@ -24,6 +26,7 @@ class ContactController extends Controller
      */
     public function create()
     {
+
         return view('contact.create');
     }
 
@@ -45,7 +48,12 @@ class ContactController extends Controller
 
 
         $contact = new Contact;
-        $contact->fill($request->all());
+        // $contact->fill($request->all());
+        $contact->name=$request->name;
+        $contact->email=$request->email;
+        $contact->subject=$request->subject;
+        $contact->body=$request->body;
+        $contact->newContact=1;
         $contact->save();
         return redirect('/contact/'.$contact->id.'/thanks');
     }
@@ -58,7 +66,8 @@ class ContactController extends Controller
      */
     public function show($id)
     {
-        //
+        $contact=Contact::findOrFail($id);
+        return view('contact.show', compact('contact'));
     }
 
     /**
@@ -69,7 +78,7 @@ class ContactController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('contact.edit');
     }
 
     /**
@@ -81,7 +90,10 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $contact=Contact::findOrFail($id);
+       $contact->newContact=0;
+       $contact->save();
+       return redirect('/contact');
     }
 
     /**
