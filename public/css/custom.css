@@ -280,6 +280,8 @@ i {
 .project{
     background-color: #000;
     padding: 2em 0em;
+     height: auto; 
+     overflow:auto;
 
 }
 

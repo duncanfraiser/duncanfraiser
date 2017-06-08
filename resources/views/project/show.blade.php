@@ -1,6 +1,6 @@
 @extends('_layout.template')
 @section('content')
-<div class="container-fluid" style="padding:0">
+<div class="container-fluid" style="padding:0; margin-top: 50px; height: auto; overflow:auto;">
 
   {{-- color desk img spacer --}}
    @include('_includes.colorDesk')
@@ -43,14 +43,14 @@
 	  <div class="col-md-10 col-md-offset-1 project">
 	    <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
 	    {{-- <h1 style="margin-bottom: 2em"><center>{{$project->name}}</center></h1> --}}
-	      <div class="col-md-8">
+	      <div class="col-md-8 col-sm-8">
 	        <h2><center>{{$section->title}}</center></h2>
 	   		<p class="sectext">{!!$section->content!!}</p>
               @if(\Auth::check())
 				<center><a href="{{url('/section/'.$section->id.'/edit')}}"><button class="btn redBtn">Edit</button></a></center>
 			  @endif
 	      </div>
-	      <div class="col-md-4">
+	      <div class="col-md-4 col-sm-4">
 	    	<a target="blank" href="{{url('storage/img/'.$section->img)}}"><img style="width: 100%" src="{{url('storage/img/'.$section->img)}}"></a>
 	      </div>
 	    </div>
@@ -65,10 +65,10 @@
     {{-- project section section --}}
       <div class="col-md-10 col-md-offset-1 project">
         <div class="col-md-12 os-animation" data-os-animation="fadeIn" data-os-animation-delay=".3s">
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-4">
     	    <a target="blank" href="{{url('storage/img/'.$section->img)}}"><img style="width: 100%" src="{{url('storage/img/'.$section->img)}}"></a>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 col-sm-8">
     	    <h2><center>{{$section->title}}</center></h2>
     		<p class="sectext">{!!$section->content!!}</p>
     		@if(\Auth::check())
@@ -90,7 +90,7 @@
     <div class="col-md-12 work">
       <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">More Work Examples</h1></center>
       @foreach($works as $key => $work)
-      <div class="col-md-4 col-sm-12 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
+      <div class="col-md-4 col-sm-4 flex-center os-animation" data-os-animation="fadeIn" data-os-animation-delay={{$delays[$key]}}>
         <a href="{{url('/project/'.$work->id)}}">
           <div class="img__wrap">
             <img class="img__img" style="max-width:100%" src="{{url('storage/img/'.$work->img)}}" />
