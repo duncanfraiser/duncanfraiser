@@ -767,7 +767,7 @@ h3 {
     background-color: transparent;
     color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 1366px) {
     .about {
         padding: 2em 2em 2em 2em;
     }
