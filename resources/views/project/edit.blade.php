@@ -3,7 +3,7 @@
 <div class="container-fluid" style="padding: 0">
 
   {{-- color desk img spacer --}}
-  <div class="col-md-12" style="padding: 0">
+  <div class="col-md-12" style="padding: 0; height: auto; overflow:auto;">
     <div class="mydeskColor">
     </div>
   </div>

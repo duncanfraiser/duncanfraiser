@@ -2,7 +2,7 @@
 @section('content')
  {{-- color desk img spacer --}}  
 @include('_includes.colorDesk')
-  <div class="col-md-8 col-md-offset-2" style="margin-bottom: 50px">
+  <div class="col-md-8 col-md-offset-2" style="margin-bottom: 50px;height: auto; overflow:auto;">
     <h2>Edit Section</h2>
 	{{Form::model($section, ['method' => 'PATCH', 'files' => true, 'action' => ['SectionController@update', $section->id]])}}
       
