@@ -660,12 +660,28 @@ border-radius: 0px;
             margin-left:10px;
         }
     }
+
+
+    .smIcon{
+        padding: 0px 0px;
+
+    }
+
+    .smIcon>a{
+        
+        padding:0px; 
+        margin:0px;
+    }
+    .smIcon>a>img{
+        height: 20px;
+
+    }
 /* END NAVBAR Styles */
 
 
 /*FOOTER*/
 .icons{
-        margin: 10px 0px;
+        margin: 5px 5px;
 }
 
 .icons img{

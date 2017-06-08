@@ -22,6 +22,8 @@
             <li><a href="{{url('/')}}">Home</a></li>
             <li><a href="{{url('/resume')}}">resume</a></li>
             <li><a href="{{url('/contact/create')}}">Contact</a></li>
+            <li class="smIcon" ><a target="BLANK" style="padding:14px 5px;" href="https://duncanfraiser.github.io/"><img src="{{asset('img/github.png')}}"></a></li>
+            <li class="smIcon"><a target="BLANK" style="padding:14px 5px; margin:0px" href="https://www.linkedin.com/in/duncan-fraiser-a66971bb/"><img src="{{asset('img/linkedin.png')}}"></a></li>
             @if (Auth::guest())
 
             {{-- <li><a href="{{url('/login')}}">Login</a></li> --}}
