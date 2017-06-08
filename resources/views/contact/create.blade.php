@@ -1,9 +1,9 @@
 @extends('_layout.template')
 @section('content')
-<div class="container-fluid" style="padding: 0">
+<div class="container-fluid" style="padding: 0; margin-top: 50px">
 @include('_includes.colorDesk')
   <div class="col-md-12" style="height: auto; overflow:auto;">
-	<div class="col-md-6 col-md-offset-2" style="padding-bottom: 50px">
+	<div class="col-md-6 col-md-offset-2" style="padding-bottom: 50px;">
   
       <center><h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s">Contact Me</h1></center>
   
