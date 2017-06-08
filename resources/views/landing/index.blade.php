@@ -32,22 +32,22 @@
     <div class="col-md-12" style="background-color: #000">
         <div class="skills">
           <center><h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Full Stack Skills</h1></center>
-          <div class="col-md-3 os-animation skill" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s">
+          <div class="col-md-3 col-sm-6 os-animation skill" data-os-animation="fadeInLeft" data-os-animation-delay="0.5s">
             <h2>Server</h2>
             <p>{!!$landing->serv!!}</p>
           </div>
 
-          <div class="col-md-3 os-animation skill" data-os-animation="fadeInDown" data-os-animation-delay="0.8s">
+          <div class="col-md-3 col-sm-6 os-animation skill" data-os-animation="fadeInDown" data-os-animation-delay="0.8s">
             <h2>Database</h2>
             <p>{!!$landing->db!!}</p>
           </div>
 
-          <div class="col-md-3 os-animation skill" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
+          <div class="col-md-3 col-sm-6 os-animation skill" data-os-animation="fadeInUp" data-os-animation-delay="1.1s">
             <h2>Backend</h2>
             <p>{!!$landing->backend!!}</p>
           </div>
 
-           <div class="col-md-3 os-animation skill" data-os-animation="fadeInRight" data-os-animation-delay="1.4s">
+           <div class="col-md-3 col-sm-6 os-animation skill" data-os-animation="fadeInRight" data-os-animation-delay="1.4s">
             <h2>Frontend</h2>
             <p>{!!$landing->frontend!!}</p>
           </div>
@@ -62,7 +62,7 @@
       <div class="col-md-9 col-md-offset-3">
           <h1 class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="0s">Development Tools</h1>
       </div>
-      <div class="col-md-3 col-md-offset-3">
+      <div class="col-md-3 col-md-offset-3 col-sm-6">
         <ul style="font-size: 2em; margin-bottom: 0px">
           @foreach($landing->tools as $key=>$tool)
             @if($key % 2 == 0) {{-- checks for even index --}}
@@ -71,7 +71,7 @@
           @endforeach
         </ul>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-6">
         <ul style="font-size: 2em">
           @foreach($landing->tools as $key=>$tool)
             @if($key %2==1) {{-- checks for odd index --}}

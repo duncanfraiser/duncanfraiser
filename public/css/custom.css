@@ -703,6 +703,8 @@ border-radius: 0px;
     .tools {
         background: transparent;
         padding: 3em;
+        height: auto;
+        overflow:auto;
     }
     @media (max-width: 767px) {
         .tools{
@@ -794,7 +796,8 @@ h3 {
 .skills{
     color: #fff;
     background-color: transparent;
-    padding: 2em;
+    padding: 2em;        height: auto;
+        overflow:auto;
 }
    @media (max-width: 767px) {
         .skills {
