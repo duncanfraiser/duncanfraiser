@@ -4,7 +4,13 @@
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" style="background-color: #000" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
-            <div class="hamburgerNotsTop"><div class="lilNots">{{App\Contact::newCons()}}</div></div>
+            <div class="hamburgerNotsTop">
+            @if(\Auth::check())
+              @if(App\Contact::newCons()!=0)
+                <div class="lilNots">{{App\Contact::newCons()}}</div>
+              @endif
+            @endif
+            </div>
             <span class="icon-bar" style="background-color: #fff"></span>
             <span class="icon-bar" style="background-color: #fff"></span>
             <span class="icon-bar" style="background-color: #fff"></span>
