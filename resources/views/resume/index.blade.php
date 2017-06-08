@@ -79,7 +79,7 @@
           </h3>
    
       <div class="col-md-6" style="padding: 0">
-        <ul>
+        <ul style="margin-bottom: 0px">
           @foreach($tools as $key=>$tool)
             @if($key % 2 == 0) {{-- checks for even index --}}
               <li class="jd os-animation animated fadeInLeft" data-os-animation-delay={{$tool->delay}}>{{$tool->name}}</li>

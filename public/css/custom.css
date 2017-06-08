@@ -714,6 +714,9 @@ border-radius: 0px;
     .work {
         background: transparent;
         padding: 3em;
+        height: auto;
+        overflow:auto;
+
     }
     @media (max-width: 767px) {
         .work{
