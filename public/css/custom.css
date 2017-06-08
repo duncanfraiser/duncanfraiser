@@ -524,6 +524,15 @@ border-radius: 0px;
 
 
 /* NAVBAR Styles */
+.nav-default{
+    margin-bottom: 50px;
+}
+@media(max-width: 1125px){
+    .nav-default{
+        color: red;
+        margin-bottom: 50px;
+    }
+}
 .navbar-nav>li>.dropdown-menu {
     margin-top: 2px;
 }
@@ -796,8 +805,9 @@ h3 {
 .skills{
     color: #fff;
     background-color: transparent;
-    padding: 2em;        height: auto;
-        overflow:auto;
+    padding: 2em;  
+    height: auto;
+    overflow:auto;
 }
    @media (max-width: 767px) {
         .skills {
@@ -826,7 +836,12 @@ h3 {
 
 
 
-
+.resume{
+background-color: #000;
+ margin-bottom: 2em;
+        height: auto;
+    overflow:auto;
+}
 
 .form-control{
     font-weight: bold;

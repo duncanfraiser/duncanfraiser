@@ -1,11 +1,11 @@
 @extends('_layout.template')
 @section('content')
-<div class="container-fluid" style="padding: 0">
+<div class="container-fluid" style="padding: 0; margin-top: 50px">
 
    @include('_includes.colorDesk')
 
 
-  <div class="col-md-12" style="background-color: #000; margin-bottom: 2em; min-height: 485px">
+  <div class="col-md-12 resume">
     <div class="col-md-8 col-md-offset-2">
       <center>
          <h1 class="os-animation" data-os-animation="foo fadeIn" data-os-animation-delay="0s" style="margin-bottom: 5px">My Resume</h1>
@@ -78,7 +78,7 @@
           @endif
           </h3>
    
-      <div class="col-md-6" style="padding: 0">
+      <div class="col-md-6 col-sm-6" style="padding: 0">
         <ul style="margin-bottom: 0px">
           @foreach($tools as $key=>$tool)
             @if($key % 2 == 0) {{-- checks for even index --}}
@@ -87,7 +87,7 @@
           @endforeach
         </ul>
       </div>
-      <div class="col-md-6" style="padding: 0">
+      <div class="col-md-6 col-sm-6" style="padding: 0">
         <ul>
           @foreach($tools as $key=>$tool)
             @if($key %2==1) {{-- checks for odd index --}}
@@ -99,7 +99,7 @@
 
 
       {{-- COMMUNITY SERVICE --}}
-      <div class="col-md-12" style="padding: 0">
+      <div class="col-md-12 col-sm-12" style="padding: 0">
         <h2 class="catigory os-animation animated fadeInDown" style="margin-top: 2em" data-os-animation-delay="0.1s">Community Service
         @if(\Auth::check())
           <a href="{{url('/community/create')}}" class="btn blueBtn" style="float:right;padding: 2px">Add Service</a>
