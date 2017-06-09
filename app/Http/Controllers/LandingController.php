@@ -17,7 +17,7 @@ class LandingController extends Controller
     public function index()
     {
         $landing=Landing::findOrFail(1);
-        $projects=Project::get();
+        $projects=Project::where('home',1)->get();
         $delays=['.3s','.5s','.7s','.9s'];
 
 
