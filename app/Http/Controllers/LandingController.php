@@ -83,7 +83,7 @@ class LandingController extends Controller
         ];
 
         $landing=Landing::findOrFail($id);
-        $projects=Project::get();
+        $projects=Project::where('home',1)->get();
         $delays=['.3s','.5s','.7s','.9s'];
         return view('landing.edit', compact('landing', 'dirs', 'seconds', 'projects','delays'));
     }
