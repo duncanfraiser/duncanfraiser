@@ -5,7 +5,7 @@
     <div class="container-fluid content mydesk">
       <div>
         <a href="{{url('/login')}}"><img style="margin-top: 25%;" class="animated fadeInDown" src="{{url('img/logo_white_sm.png')}}"></a>
-        <h1 class="animated fadeInUp introName"><strong>Duncan McLeod Fraiser Jr</strong></h1>
+        <h1 class="animated fadeInUp introName"><strong>Duncan McLeod Fraiser Jr.</strong></h1>
         <h3 class="animated fadeInUpBig introTitle">Full Stack Developer</h3>
       </div>
     </div>
