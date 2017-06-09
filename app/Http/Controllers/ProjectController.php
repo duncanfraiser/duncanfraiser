@@ -106,7 +106,7 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        $works=Project::where('id','!=', $id)->get();
+        $works=Project::where('id','!=', $id)->where('home',1)->get();
         $project=Project::findOrFail($id);
         $sectionCount=Section::where('project_id',$id)->count();
         $delays=['.3s','.5s','.7s','.9s'];
