@@ -26,6 +26,7 @@ Route::resource('/test', 'TestController');
 
 Route::resource('/project', 'ProjectController');
 Route::resource('/section', 'SectionController');
+Route::resource('/calendar', 'CalendarController');
 
 Route::resource('/resume', 'ResumeController');
 Route::resource('/job', 'JobController');
